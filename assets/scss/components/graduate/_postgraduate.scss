@@ -1,0 +1,212 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.admission-postgraduate {
+  padding: $space-16 0;
+  background-color: $white-color;
+
+  // --- Header Section ---
+  .intro-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-10;
+    align-items: center;
+    margin-bottom: $space-12;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-image-wrapper {
+      position: relative;
+
+      .main-img {
+        width: 100%;
+        border-radius: $radius-lg;
+        display: block;
+      }
+
+      .decorative-box {
+        position: absolute;
+        bottom: 0px;
+        right: 40px;
+        width: 50%;
+        height: 137px;
+        background: $white-color;
+        border-radius: $radius-md;
+        box-shadow: $shadow-lg;
+        display: none; // Match visual overlap
+
+        @include responsive(md) {
+          display: block;
+        }
+      }
+    }
+
+    .intro-content {
+      .title {
+        font-size: $font-xl;
+        font-weight: $font-bold;
+        margin-bottom: $space-4;
+        color: $black-color;
+        @include responsive(md) {
+          font-size: 30px;
+        }
+      }
+      .description {
+        font-size: $font-base;
+        line-height: $line-relaxed;
+        color: $gray-color;
+         @include responsive(md) {
+          font-size: $font-lg;
+        }
+      }
+    }
+  }
+
+  // --- CTA Banner ---
+  .cta-banner {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    border-radius: $radius-md;
+    overflow: hidden;
+    margin-bottom: $space-8;
+
+    @include responsive(md) {
+      flex-direction: row;
+    }
+
+    .cta-info {
+      flex: 1;
+      padding: $space-6 $space-8;
+      color: $white-color;
+      @include flex-center;
+
+      p {
+        font-size: $font-base;
+        margin: 0;
+      }
+    }
+
+    .cta-button {
+      background-color: $hover-color; // Teal color
+      color: $white-color;
+      padding: $space-6 $space-10;
+      text-decoration: none;
+      font-weight: $font-bold;
+      @include flex-center;
+      justify-content: space-between;
+      min-width: 280px;
+      transition: $transition-base;
+
+      &:hover {
+        background-color: darken($hover-color, 5%);
+        .arrow {
+          transform: translateX(5px);
+        }
+      }
+
+      .arrow {
+        font-size: $font-xl;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  // --- Features Grid ---
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-4;
+    margin-bottom: $space-12;
+
+    @include responsive(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-card {
+      background-color: $bg-muted;
+      padding: $space-8 $space-4;
+      border-radius: $radius-md;
+      text-align: center;
+      transition: $transition-base;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $gray-lighter;
+        transform: translateY(-3px);
+      }
+
+      .icon {
+        font-size: $font-3xl;
+        margin-bottom: $space-3;
+        color: $primary-color;
+      }
+
+      .feature-label {
+        display: block;
+        font-weight: $font-bold;
+        font-size: $font-sm;
+        color: $black-color;
+      }
+    }
+  }
+
+  // --- Programs Hero Card ---
+  .programs-hero {
+    position: relative;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    height: 400px;
+
+    .hero-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-card {
+      position: absolute;
+      top: 50%;
+      left: $space-8;
+      transform: translateY(-50%);
+      background-color: $hover-color;
+      padding: $space-8;
+      border-radius: $radius-md;
+      max-width: 320px;
+      color: $white-color;
+
+      h3 {
+        font-size: $font-2xl;
+        font-weight: $font-bold;
+        margin-bottom: $space-6;
+        line-height: $line-tight;
+      }
+
+      .explore-btn {
+        background-color: $white-color;
+        color: $hover-color;
+        padding: $space-3 $space-6;
+        border-radius: $radius-sm;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: $space-3;
+        font-weight: $font-bold;
+        transition: $transition-base;
+
+        &:hover {
+          background-color: $gray-lighter;
+          .arrow {
+            transform: translateX(5px);
+          }
+        }
+
+        .arrow {
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+}

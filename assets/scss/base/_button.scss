@@ -1,0 +1,64 @@
+@use "../mixins" as *;
+@use "../variables" as *;
+
+.button-shape {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  background-color: $primary-color;
+  color: $white-color;
+  padding: 12px 19px;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: capitalize;
+  transition: $transition;
+  cursor: pointer;
+  font-size: 18px;
+  &:hover {
+    background-color: #092f6c;
+  }
+}
+
+.button-shape-primary {
+  background: $primary-color;
+  color: $white-color;
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+.button-shape-contact {
+  background: $primary-color;
+  color: $white-color;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 9px 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: $transition;
+  cursor: pointer;
+  font-size: 10.42px;
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+.button-shape-black {
+  background: transparent;
+  color: $black-color;
+  border: 1px solid $black-color;
+  &:hover {
+    color: $white-color;
+    background: $secondary-color;
+    border: 1px solid $secondary-color;
+  }
+}
+
+.button-shape-dark {
+  background: $primary-color;
+  color: $white-color;
+  &:hover {
+    background: $black-color;
+  }
+}

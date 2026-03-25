@@ -1,0 +1,196 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.ku-header {
+  &__top {
+    background: $white-color;
+    padding: 25px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  &__logo {
+    height: 53.73px;
+    img {
+      max-width: 250px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    padding: 0;
+    max-width: 100px;
+
+    &::placeholder {
+      color: $black-color;
+      font-weight: 600;
+    }
+
+    &:focus {
+      border-bottom: 2px solid $secondary-color;
+    }
+  }
+
+  &__top-actions {
+    width: auto;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__actions-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__icon-btn {
+    display: none;
+    font-weight: 700;
+    cursor: pointer;
+    @include responsive(lg) {
+      display: flex;
+    }
+    align-items: end;
+    font-size: 14px;
+    gap: 6px;
+
+    img {
+      max-width: 18px;
+      max-height: 18px;
+      object-fit: contain;
+    }
+    span {
+      line-height: 0.9;
+    }
+  }
+
+  /* Hamburger */
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 6px;
+    cursor: pointer;
+
+    span {
+      width: 35px;
+      height: 5px;
+      font-family: "opensans-bold", sans-serif;
+      background-color: $secondary-color;
+      transition: 0.4s;
+    }
+  }
+}
+
+/* Buttons */
+
+/* Navigation Bar */
+.ku-nav {
+  background: $primary-color;
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 110;
+
+  @include responsive(lg) {
+    display: block;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: 0.6fr repeat(4, 1fr) 0.6fr;
+    align-items: center;
+    color: $white-color;
+
+   
+    width: 100%;
+    transition: $transition;
+
+    li {
+       &:hover {
+      color: $black-color;
+    }
+      width: 100%;
+      list-style: none;
+      position: relative;
+      padding: 10px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.3s ease;
+
+      &:first-child {
+        text-align: left;
+        padding: 10px 10px 10px 0;
+      }
+
+      &:last-child {
+        text-align: right;
+        padding: 10px 0 10px 10px;
+      }
+
+      // vertical separator
+      &::after {
+        content: "";
+        position: absolute;
+        top: 30%;
+        right: 0;
+        height: 40%;
+        width: 2px;
+        background-color: $white-color;
+      }
+
+      // Remove separator for last item
+      &:last-child::after {
+        content: none;
+      }
+    }
+  }
+}
+
+/* Mega Menu */
+.mega-menu {
+  display: none;
+  position: absolute;
+  width: 100%;
+
+  color: white;
+  padding: 40px 0;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+    h4 {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      padding: 6px 0;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.mega-menu.active {
+  display: block;
+}
