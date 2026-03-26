@@ -25,34 +25,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Headings and paragraphs: use the only loaded weight (400) */
-h1 {
-  font-weight: 400 !important;
-  line-height: 1.2 !important;
-  font-size: clamp(25px, 3.2vw, 40px) !important;
-
-  @include responsive(xl) {
-    font-size: 45px !important;
-  }
-}
-
-h2 {
-  font-size: clamp(25px, 3.2vw, 37px) !important;
-  line-height: 1.2 !important;
-  font-weight: 600 !important;
-}
-
-h3 {
-  font-size: clamp(20px, 2.5vw, 30px) !important;
-  line-height: 1.2 !important;
-  font-weight: 500 !important;
-}
-
-p {
-  font-size: clamp(14px, 1.1vw, 16px) !important;
-  line-height: 1.6 !important;
-  font-weight: 400 !important;
-}
 
 .container {
   width: 90vw;
@@ -157,58 +129,5 @@ button {
   100% {
     transform: translateY(0) scale(1);
     opacity: 1;
-  }
-}
-
-/* stat css */
-.stat-number {
-  font-size: clamp(36px, 6vw, 70px);
-  font-weight: 700;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: clamp(20px, 2.2vw, 24px);
-  font-weight: 400;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.unorder-list {
-  list-style-type: disc !important;
-}
-
-.order-list {
-  list-style-type: decimal !important;
-}
-
-// @include responsive(md) {
-//   .stat-number {
-//     font-size: 55px;
-//   }
-
-//   .stat-label {
-//     font-size: 22px;
-//   }
-// }
-
-// @include responsive(xl) {
-//   .stat-number {
-//     font-size: 97.19px;
-//   }
-
-//   .stat-label {
-//     font-size: 25.74px;
-//   }
-// }
-
-/* global map css */
-.global-map {
-  padding-top: 5rem;
-
-  &__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 }

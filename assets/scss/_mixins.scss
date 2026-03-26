@@ -19,9 +19,31 @@
 }
 
 
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin max-size($max-width, $max-height: $max-width) {
+  max-width: $max-width;
+  max-height: $max-height;
+}
+
 @mixin grid-center {
   display: grid;
   place-items: center;
+}
+
+@mixin hover-color{
+  filter: brightness(0) saturate(100%) invert(71%) sepia(59%) saturate(5609%) hue-rotate(146deg) brightness(94%) contrast(81%);
+}
+
+@mixin gray-dark {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(93%) saturate(19%) hue-rotate(13deg) brightness(90%) contrast(79%);
+}
+
+@mixin light-blue{
+  filter: brightness(0) saturate(100%) invert(24%) sepia(47%) saturate(2736%) hue-rotate(201deg) brightness(93%) contrast(85%);
 }
 
 @mixin responsive($breakpoint, $type: max) {

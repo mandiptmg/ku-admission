@@ -42,71 +42,138 @@
   </section>
 
 
-  <!-- admission-postgraduate -->
-<section class="admission-postgraduate">
-  <div class="container">
-    
-    <!-- Header Section -->
-    <div class="intro-section">
-      <div class="intro-image-wrapper">
-        <img src="assets/images/graduate/postgraduate.png" alt="Postgraduate student" class="main-img">
-        <div class="decorative-box"></div>
-      </div>
-      <div class="intro-content">
-        <h2 class="title">Postgraduate Admission</h2>
-        <p class="description">
-          Undergraduate degrees from Khalifa University of Science and Technology 
-          are designed to equip graduates with the necessary skills and knowledge 
-          that are highly sought-after in today's job market. Khalifa University 
-          has granted over 3,200 bachelor's degrees to qualifying undergraduate students.
-        </p>
-      </div>
-    </div>
+    <!-- admission-undergraduate -->
+  <section class="admission-undergraduate">
+    <div class="container">
 
-    <!-- CTA Banner -->
-    <div class="cta-banner">
-      <div class="cta-info">
-        <p>The application will close on <strong>2 March 2026</strong> - Apply before this date to be considered for admission.</p>
+      <!-- Header Section -->
+      <div class="intro-section">
+       
+        <div class="intro-content">
+          <h2 class="title">Undergraduate Admission</h2>
+          <p class="description">
+            Undergraduate degrees from Khalifa University of Science and Technology
+            are designed to equip graduates with the necessary skills and knowledge
+            that are highly sought-after in today's job market. Khalifa University
+            has granted over 3,200 bachelor's degrees to qualifying undergraduate students.
+          </p>
+        </div>
+         <div class="intro-image-wrapper">
+          <img src="assets/images/graduate/undergraduate.png" alt="Undergraduate student" class="main-img">
+        </div>
       </div>
-      <a href="#" class="cta-button">
-        <span>Start your application here</span>
-        <span class="arrow">&rarr;</span>
-      </a>
-    </div>
 
-    <!-- Features Grid -->
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="icon">📜</div>
-        <span class="feature-label">Requirements</span>
-      </div>
-      <div class="feature-card">
-        <div class="icon">⌖</div>
-        <span class="feature-label">External Assessments</span>
-      </div>
-      <div class="feature-card">
-        <div class="icon">$</div>
-        <span class="feature-label">Fees</span>
-      </div>
-      <div class="feature-card">
-        <div class="icon">📄</div>
-        <span class="feature-label">Application Types</span>
-      </div>
-    </div>
-
-    <!-- Bottom Hero Card -->
-    <div class="programs-hero">
-      <img src="assets/images/graduate/Laboratory.png" alt="Laboratory" class="hero-bg">
-      <div class="hero-card">
-        <h3>Undergraduate Programs</h3>
-        <a href="#" class="explore-btn">
-          Explore here <span class="arrow">&rarr;</span>
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div class="cta-info">
+          <p >The application will close on <strong>2 March 2026</strong> - Apply before this date to be considered for admission.</p>
+        </div>
+        <a href="#" class="cta-button">
+          <span>Start your application here</span>
+         <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow"/>
         </a>
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- Features Grid -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <img src="assets/images/feature-card/requirements.png" alt="Requirements">
+          <span class="feature-label">Requirements</span>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/feature-card/assessments.png" alt="Assessments">
+          <span class="feature-label">External Assessments</span>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/feature-card/fees.png" alt="fees">
+          <span class="feature-label">Fees</span>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/feature-card/application.png" alt="Application">
+          <span class="feature-label">Application Types</span>
+        </div>
+      </div>
+
+      <!-- Bottom Hero Card -->
+      <div class="programs-hero">
+        <img src="assets/images/graduate/Laboratory1.png" alt="Laboratory" class="hero-bg">
+        <div class="hero-card">
+          <h3 class="hero-card__title">Undergraduate Programs</h3>
+          <a href="#" class="explore-btn">
+            Explore here<img src="assets/images/right-arrow.png" alt="right arrow" class="arrow"/>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- admission-postgraduate -->
+  <section class="admission-postgraduate">
+    <div class="container">
+
+      <!-- Header Section -->
+      <div class="intro-section">
+        <div class="intro-image-wrapper">
+          <img src="assets/images/graduate/postgraduate.png" alt="Postgraduate student" class="main-img">
+          <div class="decorative-box"></div>
+        </div>
+        <div class="intro-content">
+          <h2 class="title">Postgraduate Admission</h2>
+          <p class="description">
+            Undergraduate degrees from Khalifa University of Science and Technology
+            are designed to equip graduates with the necessary skills and knowledge
+            that are highly sought-after in today's job market. Khalifa University
+            has granted over 3,200 bachelor's degrees to qualifying undergraduate students.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner">
+        <div class="cta-info">
+          <p >The application will close on <strong>2 March 2026</strong> - Apply before this date to be considered for admission.</p>
+        </div>
+        <a href="#" class="cta-button">
+          <span>Start your application here</span>
+         <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow"/>
+        </a>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <img src="assets/images/feature-card/requirements.png" alt="Requirements">
+          <span class="feature-label">Requirements</span>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/feature-card/assessments.png" alt="Assessments">
+          <span class="feature-label">External Assessments</span>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/feature-card/fees.png" alt="fees">
+          <span class="feature-label">Fees</span>
+        </div>
+        <div class="feature-card">
+          <img src="assets/images/feature-card/application.png" alt="Application">
+          <span class="feature-label">Application Types</span>
+        </div>
+      </div>
+
+      <!-- Bottom Hero Card -->
+      <div class="programs-hero">
+        <img src="assets/images/graduate/Laboratory.png" alt="Laboratory" class="hero-bg">
+        <div class="hero-card">
+          <h3 class="hero-card__title">Undergraduate Programs</h3>
+          <a href="#" class="explore-btn">
+            Explore here<img src="assets/images/right-arrow.png" alt="right arrow" class="arrow"/>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- scholorship -->
   <section class="scholarships-section">
@@ -123,7 +190,7 @@
           </div>
           <div class="card-footer">
             <span class="label">UNDERGRADUATE SCHOLARSHIPS</span>
-            <span class="arrow">&rarr;</span>
+           <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow"/>
           </div>
         </a>
 
@@ -134,12 +201,101 @@
           </div>
           <div class="card-footer">
             <span class="label">UNDERGRADUATE SCHOLARSHIPS</span>
-            <span class="arrow">&rarr;</span>
+           <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow"/>
           </div>
         </a>
       </div>
     </div>
   </section>
+
+
+
+  <section class="support-section">
+  <div class="container">
+    
+    <!-- FAQ Section -->
+    <div class="faq-container">
+      <h2 class="faq-title">FAQ</h2>
+      <div id="faq-accordion" class="accordion">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Action Links Grid -->
+    <div class="links-grid">
+      <a href="#" class="action-btn bg-primary">
+        <span class="text">KU Undergraduate Brochure</span>
+        <div class="action-meta">
+          <span class="separator"></span>
+          <img src="assets/images/vision.png" alt="vison" class="icon">
+          <span class="label">View</span>
+        </div>
+      </a>
+      <a href="#" class="action-btn bg-slate">
+        <span class="text">Ku Times</span>
+        <div class="action-meta">
+          <span class="separator"></span>
+          <img src="assets/images/vision.png" alt="vison" class="icon">
+          <span class="label">View</span>
+        </div>
+      </a>
+      <a href="#" class="action-btn bg-navy">
+        <span class="text">KU Undergraduate Catalog</span>
+        <div class="action-meta">
+          <span class="separator"></span>
+          <img src="assets/images/vision.png" alt="vison" class="icon">
+          <span class="label">View</span>
+        </div>
+      </a>
+      <a href="#" class="action-btn bg-dark">
+        <span class="text">Connect with us</span>
+        <div class="action-meta">
+          <span class="separator"></span>
+          <img src="assets/images/vision.png" alt="vison" class="icon" style="opacity: 0;">
+
+          <span class="label">Visit</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Contact Info Section -->
+    <div class="contact-section">
+      <div class="contact-header">
+        <h2 class="main-title">Office of Student Recruitment and Admission</h2>
+       
+      </div>
+<div>
+   <p class="sub-title">Khalifa University of Science and Technology</p>
+      <div class="contact-cards">
+        
+        <div class="info-card">
+          <div class="icon">📞</div>
+          <div class="details">
+            <span class="type">TELEPHONE</span>
+            <span class="value">02 3123333</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon">📧</div>
+          <div class="details">
+            <span class="type">EMAIL</span>
+            <span class="value">ugadmissions@ku.ac.ae</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="icon">🕒</div>
+          <div class="details">
+            <span class="type">CALL CENTER WORKING HOURS</span>
+            <span class="value">7:30AM - 5:00PM</span>
+          </div>
+        </div>
+      </div>
+</div>
+
+    </div>
+
+  </div>
+</section>
 
 
   <!-- footer section  -->
@@ -153,6 +309,7 @@
 
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/faq.js"></script>
   <script type="module" src="assets/js/menu.js "></script>
 
 </body>

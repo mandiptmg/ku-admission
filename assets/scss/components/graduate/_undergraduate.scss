@@ -1,9 +1,9 @@
 @use "../../mixins" as *;
 @use "../../variables" as *;
 
-.admission-postgraduate {
+.admission-undergraduate {
   padding: $space-16 0;
-  background-color: $white-color;
+  background-color: $bg-muted;
 
   // --- Header Section ---
   .intro-section {
@@ -26,21 +26,7 @@
         display: block;
       }
 
-      .decorative-box {
-        position: absolute;
-        bottom: 0px;
-        right: 25px;
-        width: 50%;
-        height: 137px;
-        background: $white-color;
-        border-radius: $radius-md;
-        box-shadow: $shadow-lg;
-        display: none; // Match visual overlap
-
-        @include responsive(md) {
-          display: block;
-        }
-      }
+     
     }
 
     .intro-content {
@@ -149,7 +135,7 @@
     }
 
     .feature-card {
-      background-color: $bg-muted;
+      background-color: $white-color;
       padding: $space-8 $space-4;
       border-radius: $radius-10;
       text-align: center;
@@ -203,9 +189,9 @@
       margin-top: -1.9rem;
       margin-left: $space-8;
       top: 50%;
-      left: $space-8;
+      right: $space-16;
       transform: translateY(-50%);
-      background-color: $hover-color;
+      background-color: $secondary-color;
       padding: $space-8;
       border-radius: $radius-md;
       max-width: 320px;
@@ -228,7 +214,7 @@
         margin-top: $space-6;
         position: absolute;
         background-color: $white-color;
-        color: $hover-color;
+        color: $secondary-color;
         padding: $space-3 $space-6;
         border-radius: $radius-10;
         text-decoration: none;
@@ -255,7 +241,7 @@
 
         .arrow {
           transition: transform 0.3s ease;
-          @include hover-color;
+          @include light-blue;
         }
       }
     }

@@ -8,18 +8,21 @@
   overflow: hidden;
   font-family: $font-secondary;
 
-
   .section-title {
     color: $white-color;
     text-align: center;
     font-weight: $font-bold;
     margin-bottom: $space-16;
     text-transform: uppercase;
-    
-    font-size: $font-2xl;
+
+    font-size: $font-2xl !important;
 
     @include responsive(md) {
-      font-size: $font-4xl;
+      font-size: $font-3xl !important;
+    }
+
+    @include responsive(lg) {
+      font-size: $font-4xl !important;
     }
   }
 
@@ -46,7 +49,7 @@
 
     &:hover {
       transform: translateY(-10px);
-      
+
       .arrow {
         transform: translateX(10px);
       }
@@ -75,24 +78,23 @@
       .label {
         font-weight: $font-bold;
         text-transform: uppercase;
-        
+
         // Responsive Font Size for Label
         font-size: $font-sm;
-        
+
         @include responsive(md) {
           font-size: $font-lg; // 18px on tablet
         }
-           @include responsive(xl) {
+        @include responsive(xl) {
           font-size: 25px; // 25px on desktop
         }
-
       }
 
       .arrow {
         font-size: $font-3xl; // Large arrow icon
         font-weight: $font-light;
         transition: transform 0.4s $ease-out;
-        color: $gray-dark;
+        @include gray-dark;
       }
     }
   }
