@@ -1,0 +1,78 @@
+export const faqs = [
+  {
+    question:
+      "How do I change my preference to Khalifa University in the NAPO system?",
+    answer:
+      "Log in to your NAPO portal, navigate to the choice selection, and update your preference to Khalifa University before the deadline.",
+  },
+  {
+    question: "How do I book the admission interview?",
+    answer:
+      "Shortlisted candidates will receive an email invitation with a direct link to the booking system.",
+  },
+  {
+    question: "What if my application is missing documents?",
+    answer:
+      "You can upload missing documents through the student portal under the 'Incomplete Applications' tab.",
+  },
+  {
+    question: "How do I send my test scores?",
+    answer:
+      "Submit scores electronically through the testing center using KU's institutional code.",
+  },
+  {
+    question: "What majors are offered at Khalifa University?",
+    answer:
+      "KU offers a wide range of programs in Engineering, Arts & Sciences, and Medicine.",
+  },
+];
+
+export const dates = [
+   {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  }, {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  }, {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  },
+  {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  },
+  {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  },
+  {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  },
+  {
+    day: "18",
+    month: "AUG",
+    fullDate: "MONDAY, AUGUST 18",
+    title:
+      "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
+  },
+];

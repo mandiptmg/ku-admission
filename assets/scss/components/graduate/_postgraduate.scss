@@ -58,10 +58,11 @@
       }
       .description {
         margin: 0 !important;
-        font-size: $font-sm !important;
         line-height: $line-relaxed;
         color: $black-color;
         font-weight: $font-regular;
+        font-size: $font-sm !important;
+
         @include responsive(md) {
           font-size: $font-base !important;
         }

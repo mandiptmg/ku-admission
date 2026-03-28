@@ -1,0 +1,259 @@
+@use "../../variables" as *;
+@use "../../mixins" as *;
+
+.dates-admissions {
+  padding: $space-16 0;
+  font-family: $font-primary;
+
+  .layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7rem;
+
+    @media (max-width: $breakpoint-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .section-title {
+    font-weight: $font-bold;
+    font-size: $font-2xl;
+    @include responsive(md) {
+      font-size: $font-30;
+    }
+    @include responsive(lg) {
+      font-size: 34.88px;
+    }
+    color: $primary-color;
+    margin-bottom: $space-6;
+  }
+
+  .important-dates {
+    .dates-viewport {
+      height: 300px; // 95px * 4 visible items
+      @include responsive(lg){
+      height: 310px; // 95px * 4 visible items
+
+      }
+      overflow: hidden;
+      position: relative;
+    }
+
+    .dates-list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-4;
+      transition: transform 0.3s ease;
+    }
+
+    .date-item {
+      display: flex;
+      gap: $space-4;
+      align-items: flex-start;
+
+      .date-badge {
+        width: 60px;
+        height: 60px;
+        background: $primary-color;
+        color: $white-color;
+        border-radius: $radius-md;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        b {
+          font-size: $font-lg;
+
+          @include responsive(md) {
+            font-size: $font-xl;
+          }
+          @include responsive(lg) {
+            font-size: 24.7px;
+          }
+
+          font-weight: $font-regular;
+        }
+        small {
+          font-size: 9px;
+
+          @include responsive(md) {
+            font-size: 10px;
+          }
+          @include responsive(lg) {
+            font-size: 11.05px;
+          }
+
+          font-weight: $font-regular;
+        }
+      }
+
+      .date-content {
+        small {
+          display: block;
+          color: $gray-light;
+          font-weight: $font-bold;
+          margin-bottom: 2px;
+          font-size: 10px;
+
+          @include responsive(md) {
+            font-size: 12px;
+          }
+          @include responsive(lg) {
+            font-size: 13.5px;
+          }
+        }
+
+        strong {
+          font-size: $font-sm !important;
+
+          @include responsive(md) {
+            font-size: $font-base !important;
+          }
+          @include responsive(lg) {
+            font-size: $font-lg !important;
+          }
+          font-weight: $font-bold;
+
+          line-height: 1.2;
+          display: block;
+          color: $black-color;
+        }
+      }
+    }
+
+    .carousel-controls {
+      margin-top: $space-4;
+      display: flex;
+      gap: $space-2;
+
+      .control-btn {
+        background: $white-color;
+        border: 2px solid $black-color;
+        color: $black-color;
+        border-radius: $radius-full;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: $transition-fast;
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+
+        &:hover:not(:disabled) {
+          background: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+
+  .admissions-journey {
+    .video-container {
+      position: relative;
+      border-radius: $radius-lg;
+      overflow: hidden;
+
+      .thumbnail {
+        width: 100%;
+        display: block;
+      }
+
+      .video-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .play-button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: none;
+          padding: $space-4 $space-6;
+          border-radius: $radius-md;
+          color: $white-color;
+          cursor: pointer;
+          transition: $transition;
+
+          span{
+            font-size: 15.51px;
+            margin-top: $space-2;
+          }
+
+          .play-icon {
+            width: 72px;
+            height: 72px;
+            transition: $transition;
+            &:hover {
+              scale: 1.2;
+            }
+
+            margin-bottom: $space-2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.video-modal {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: $space-6;
+  margin: 0 auto;
+
+  &.open {
+    display: flex;
+  }
+
+  .video-modal-content {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9;
+    background: $black-color;
+    border-radius: $radius-lg;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: $white-color;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: $radius-sm;
+      padding: 4px 8px;
+      transition: $transition;
+
+      &:hover {
+        background: $primary-color;
+        color: $white-color;
+      }
+    }
+  }
+}
