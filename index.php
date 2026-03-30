@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <title>Khalifa University – IEEE EMBS</title> -->
   <title>
-    Khalifa University Alumni - Stay Connected, Always Evolving
+    Khalifa University - Admissions
   </title>
 
   <!-- Favicon for standard browsers -->
