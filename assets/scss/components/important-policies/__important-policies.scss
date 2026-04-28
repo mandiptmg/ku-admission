@@ -13,7 +13,7 @@
     text-align: left;
     font-weight: $font-bold;
     margin-bottom: $space-16;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: $font-lg !important;
 
     @include responsive(md) {

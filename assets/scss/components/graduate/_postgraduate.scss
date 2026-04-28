@@ -214,13 +214,22 @@
       padding-bottom: $space-12;
 
       &__title {
-        font-size: $font-xl !important;
+        // font-size: $font-xl !important;
+        // @include responsive(md) {
+        //   font-size: $font-2xl !important;
+        // }
+        // @include responsive(lg) {
+        //   font-size: 28.17px !important;
+        // }
+
+        font-size: $font-base !important;
         @include responsive(md) {
-          font-size: $font-2xl !important;
+          font-size: $font-lg !important;
         }
         @include responsive(lg) {
-          font-size: 28.17px !important;
+          font-size: 21px !important;
         }
+
         font-weight: $font-bold;
         // line-height: $line-tight;
       }

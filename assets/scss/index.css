@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* keep if you actually need it */
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 /* =======================
    COLORS
    ======================= */
@@ -477,16 +474,16 @@
   padding-bottom: 3rem;
 }
 .admission-postgraduate .programs-hero .hero-card__title {
-  font-size: 1rem !important;
+  font-size: 1.25rem !important;
 }
 @media (min-width: 45rem) {
   .admission-postgraduate .programs-hero .hero-card__title {
-    font-size: 1.125rem !important;
+    font-size: 1.5rem !important;
   }
 }
 @media (min-width: 60rem) {
   .admission-postgraduate .programs-hero .hero-card__title {
-    font-size: 21px !important;
+    font-size: 28.17px !important;
   }
 }
 .admission-postgraduate .programs-hero .hero-card__title {
@@ -1556,161 +1553,4 @@
   background: #000000;
 }
 
-/* Prevent synthetic bold/italic when additional weights aren't loaded */
-* {
-  font-synthesis: none;
-}
-
-/* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-}
-
-.container {
-  width: 90vw;
-  margin: 0 auto;
-  font-family: "Nunito", sans-serif !important;
-}
-@media (min-width: 82.5rem) {
-  .container {
-    width: 71.688rem;
-  }
-}
-.container {
-  max-width: 1147px;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-}
-
-button {
-  border: none;
-  outline: none;
-  background: none;
-}
-
-.scroll-top-btn {
-  position: fixed;
-  right: 30px;
-  bottom: 40px;
-  width: 50px;
-  z-index: 99;
-  height: 50px;
-  border-radius: 50%;
-  opacity: 0;
-  visibility: hidden;
-  border: none;
-  display: grid;
-  place-items: center;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-  transition: all 0.5s ease;
-}
-.scroll-top-btn:hover {
-  background-color: #004eaa;
-  transform: scale(1.2);
-}
-
-.scroll-top-btn .scroll-btn {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  rotate: 90deg;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-@media (min-width: 33.75rem) {
-  .scroll-top-btn.show {
-    opacity: 1;
-    visibility: visible;
-    animation: bounceIn 0.6s ease forwards;
-  }
-}
-.scroll-top-btn.show {
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* scroll top animation */
-@keyframes bounceIn {
-  0% {
-    transform: translateY(50px) scale(0.5);
-    opacity: 0;
-  }
-  60% {
-    transform: translateY(-10px) scale(1.1);
-    opacity: 1;
-  }
-  80% {
-    transform: translateY(5px) scale(0.95);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-}
-/* VIDEO MODAL */
-.video-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  padding: 1rem;
-}
-.video-modal.active {
-  display: flex;
-}
-.video-modal__content {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  aspect-ratio: 16/9;
-  background: #000;
-  border-radius: 12px;
-  overflow: hidden;
-  transform: scale(0.9);
-  opacity: 0;
-  transition: 0.3s ease;
-}
-.video-modal.active .video-modal__content {
-  transform: scale(1);
-  opacity: 1;
-}
-.video-modal iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.video-modal__close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 50%;
-  background: #fff;
-  cursor: pointer;
-}
-
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */
