@@ -1,0 +1,264 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.admission-postgraduate {
+  padding: $space-16 0;
+  background-color: $white-color;
+
+  // --- Header Section ---
+  .intro-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-10;
+    align-items: center;
+    margin-bottom: $space-12;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-image-wrapper {
+      position: relative;
+
+      .main-img {
+        width: 100%;
+        border-radius: $radius-lg;
+        display: block;
+      }
+
+      .decorative-box {
+        position: absolute;
+        bottom: 0px;
+        right: 25px;
+        width: 50%;
+        height: 137px;
+        background: $white-color;
+        border-radius: $radius-md;
+        box-shadow: $shadow-lg;
+        display: none; // Match visual overlap
+
+        @include responsive(md) {
+          display: block;
+        }
+      }
+    }
+
+    .intro-content {
+      .title {
+        font-size: $font-xl !important;
+        font-weight: $font-bold;
+        margin-bottom: $space-4;
+        color: $black-color;
+        @include responsive(md) {
+          font-size: $font-2xl !important;
+        }
+        @include responsive(lg) {
+          font-size: $font-30 !important;
+        }
+      }
+      .description {
+        margin: 0 !important;
+        line-height: $line-relaxed;
+        color: $black-color;
+        font-weight: $font-regular;
+        font-size: $font-sm !important;
+
+        // @include responsive(md) {
+        //   font-size: $font-base !important;
+        // }
+        // @include responsive(lg) {
+        //   font-size: $font-lg !important;
+        // }
+      }
+    }
+  }
+
+  // --- CTA Banner ---
+  .cta-banner {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    border-radius: $radius-10;
+    overflow: hidden;
+    margin-bottom: $space-8;
+    gap: $space-8;
+
+    @include responsive(md) {
+      flex-direction: row;
+    }
+
+    .cta-info {
+      padding: $space-6 $space-8;
+      color: $white-color;
+      @include flex-center;
+
+      p {
+        margin: 0;
+        font-size: $font-base !important;
+        @include responsive(md) {
+          font-size: $font-lg !important;
+        }
+        @include responsive(lg) {
+          font-size: 21px !important;
+        }
+      }
+    }
+
+    .cta-button {
+      background-color: $hover-color;
+      color: $white-color;
+      border-radius: $radius-10;
+      padding: $space-6 $space-10;
+      text-decoration: none;
+      font-weight: $font-bold;
+      font-size: $font-base;
+      @include responsive(md) {
+        font-size: $font-lg;
+      }
+      @include responsive(lg) {
+        font-size: 21px;
+      }
+      @include flex-center;
+      justify-content: space-between;
+      gap: $space-8;
+      min-width: 280px;
+      transition: $transition-base;
+
+      &:hover {
+        background-color: darken($hover-color, 5%);
+        .arrow {
+          transform: translateX(5px);
+        }
+      }
+
+      .arrow {
+        font-size: $font-30;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  // --- Features Grid ---
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-4;
+    margin-bottom: $space-12;
+
+    @include responsive(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-card {
+      background-color: $bg-muted;
+      padding: $space-8 $space-4;
+      border-radius: $radius-10;
+      text-align: center;
+      transition: $transition-base;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $gray-lighter;
+        transform: translateY(-3px);
+      }
+
+      .icon {
+        @include size(100%);
+        @include max-size(32px);
+        color: $primary-color;
+      }
+
+      .feature-label {
+        margin-top: $space-4;
+
+        display: block;
+        font-weight: $font-bold;
+        color: $black-color;
+        font-size: $font-sm;
+        // @include responsive(md) {
+        //   font-size: $font-base;
+        // }
+        // @include responsive(lg) {
+        //   font-size: $font-lg;
+        // }
+      }
+    }
+  }
+
+  // --- Programs Hero Card ---
+  .programs-hero {
+    position: relative;
+    border-radius: $radius-20;
+    overflow: hidden;
+    height: 400px;
+
+    .hero-bg {
+      width: 100%;
+      max-height: 356px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-card {
+      position: absolute;
+      margin-top: -1.9rem;
+      margin-left: $space-8;
+      top: 50%;
+      right: $space-8;
+      transform: translateY(-50%);
+      background-color: $hover-color;
+      padding: $space-8;
+      border-radius: $radius-md;
+      max-width: 320px;
+      color: $white-color;
+      padding-bottom: $space-12;
+
+      &__title {
+        font-size: $font-xl !important;
+        @include responsive(md) {
+          font-size: $font-2xl !important;
+        }
+        @include responsive(lg) {
+          font-size: 28.17px !important;
+        }
+        font-weight: $font-bold;
+        // line-height: $line-tight;
+      }
+
+      .explore-btn {
+        margin-top: $space-6;
+        position: absolute;
+        background-color: $white-color;
+        color: $hover-color;
+        padding: $space-3 $space-6;
+        border-radius: $radius-10;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: $space-4;
+        font-weight: $font-bold;
+        transition: $transition-base;
+
+        font-size: $font-sm;
+        @include responsive(md) {
+          font-size: $font-base;
+        }
+        @include responsive(lg) {
+          font-size: $font-lg;
+        }
+
+        &:hover {
+          background-color: $gray-lighter;
+          .arrow {
+            transform: translateX(5px);
+          }
+        }
+
+        .arrow {
+          transition: transform 0.3s ease;
+          @include hover-color;
+        }
+      }
+    }
+  }
+}

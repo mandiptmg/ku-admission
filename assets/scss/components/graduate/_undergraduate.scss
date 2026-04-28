@@ -1,0 +1,317 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.admission-undergraduate {
+  padding: $space-16 0;
+  background-color: $bg-muted;
+
+  // --- Header Section ---
+  .intro-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-10;
+    align-items: center;
+    margin-bottom: $space-12;
+
+    @include responsive(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-image-wrapper {
+      position: relative;
+
+      .main-img {
+        width: 100%;
+        border-radius: $radius-lg;
+        display: block;
+      }
+    }
+
+    .intro-content {
+      .title {
+        font-size: $font-xl !important;
+        font-weight: $font-bold;
+        margin-bottom: $space-4;
+        color: $black-color;
+        @include responsive(md) {
+          font-size: $font-2xl !important;
+        }
+        @include responsive(lg) {
+          font-size: $font-30 !important;
+        }
+      }
+      .description {
+        margin: 0 !important;
+        font-size: $font-sm !important;
+        line-height: $line-relaxed;
+        color: $black-color;
+        font-weight: $font-regular;
+        // @include responsive(md) {
+        //   font-size: $font-base !important;
+        // }
+        // @include responsive(lg) {
+        //   font-size: $font-lg !important;
+        // }
+      }
+    }
+  }
+
+  // --- CTA Banner ---
+  .cta-banner {
+    display: flex;
+    flex-direction: column;
+    background-color: $secondary-color;
+    border-radius: $radius-10;
+    overflow: hidden;
+    margin-bottom: $space-8;
+    gap: $space-8;
+
+    @include responsive(md) {
+      flex-direction: row;
+    }
+
+    .cta-info {
+      padding: $space-6 $space-8;
+      color: $white-color;
+      @include flex-center;
+
+      p {
+        margin: 0;
+        font-size: $font-base !important;
+        @include responsive(md) {
+          font-size: $font-lg !important;
+        }
+        @include responsive(lg) {
+          font-size: 21px !important;
+        }
+      }
+    }
+
+    .cta-button {
+      background-color: $hover-color;
+      color: $white-color;
+      border-radius: $radius-10;
+      padding: $space-6 $space-10;
+      text-decoration: none;
+      font-weight: $font-bold;
+      font-size: $font-base;
+      @include responsive(md) {
+        font-size: $font-lg;
+      }
+      @include responsive(lg) {
+        font-size: 21px;
+      }
+      @include flex-center;
+      justify-content: space-between;
+      gap: $space-8;
+      min-width: 280px;
+      transition: $transition-base;
+
+      &:hover {
+        background-color: darken($hover-color, 5%);
+        .arrow {
+          transform: translateX(5px);
+        }
+      }
+
+      .arrow {
+        font-size: $font-30;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  // --- Features Grid ---
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-4;
+    margin-bottom: $space-12;
+
+    @include responsive(lg) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .feature-card {
+      background-color: $white-color;
+      padding: $space-8 $space-4;
+      border-radius: $radius-10;
+      text-align: center;
+      transition: $transition-base;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($white-color, 0.5);
+        transform: translateY(-3px);
+      }
+
+      .icon {
+        @include size(100%);
+        @include max-size(32px);
+        color: $primary-color;
+      }
+
+      .feature-label {
+        margin-top: $space-4;
+
+        display: block;
+        font-weight: $font-bold;
+        color: $black-color;
+        font-size: $font-sm;
+        // @include responsive(md) {
+        //   font-size: $font-base;
+        // }
+        // @include responsive(lg) {
+        //   font-size: $font-lg;
+        // }
+      }
+    }
+  }
+
+  /* ── Grid ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+    width: 100%;
+    @include responsive(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* ── Card ── */
+  .card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    .card {
+      aspect-ratio: 4 / 3;
+    }
+
+    @include responsive(md) {
+      aspect-ratio: 3 / 4;
+    }
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+  }
+
+  /* ── Photo ── */
+  .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  .card:hover .card-img {
+    transform: scale(1.04);
+  }
+
+  /* ── Gradient overlay ── */
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 100%,
+      rgba(10, 22, 50, 0.55) 40%,
+      rgba(8, 18, 45, 0.9) 60%
+    );
+  }
+
+  /* ── Bottom content ── */
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 18px 20px;
+  }
+
+  /* ── Category pill ── */
+  .card-tag {
+    display: inline-block;
+    padding: 8px 12px;
+    border: 1px solid rgba($gray-light, 0.5);
+    border-radius: 12.72px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .tag-engineering {
+    background: rgba($primary-color, 0.4);
+  }
+  .tag-medicine {
+    background: rgba(#2ee6e8, 0.5);
+  }
+  .tag-science {
+    background: rgba(#f9af2f, 0.5);
+  }
+
+  /* ── Title ── */
+  .card-title {
+    // font-size: 20px;
+    font-size: 14px;
+
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  /* ── Subtitle ── */
+  .card-sub {
+    font-size: 12px;
+    font-weight: 300;
+
+    color: $white-color;
+    line-height: 1.5;
+  }
+
+  .card-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Arrow button ── */
+  .card-btn {
+    // width: 32px;
+    // height: 32px;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    background: rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
+    cursor: pointer;
+    padding: 0.2rem;
+  }
+
+  .card:hover .card-btn {
+    background: rgba($gray-light, 0.5);
+    border-color: #fff;
+  }
+}

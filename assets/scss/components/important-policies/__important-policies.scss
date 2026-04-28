@@ -1,0 +1,106 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.important-policies {
+  background: #f8f9fb;
+
+  text-align: center;
+
+  padding: $space-16 0;
+
+  .section-title {
+    color: $black-color;
+    text-align: left;
+    font-weight: $font-bold;
+    margin-bottom: $space-16;
+    text-transform: uppercase;
+    font-size: $font-lg !important;
+
+    @include responsive(md) {
+      font-size: $font-xl !important;
+    }
+
+    @include responsive(lg) {
+      font-size: 25px !important;
+    }
+  }
+
+  .important-policies-container {
+    .faq-item {
+      border: 1px solid rgba($black-color, 0.5);
+      margin-bottom: $space-4;
+      padding: 0 $space-4;
+      border-radius: $radius-10;
+
+      .faq-header {
+        width: 100%;
+        padding: $space-4 0;
+        @include flex-center;
+        justify-content: space-between;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        font-size: $font-base;
+        color: $gray-dark;
+        font-size: $font-sm;
+        font-weight: 600;
+        // @include responsive(md) {
+        //   font-size: $font-base;
+        // }
+        // @include responsive(lg) {
+        //   font-size: $font-lg;
+        // }
+
+        .icon {
+          font-size: $font-xs;
+          opacity: 0.5;
+          transition: transform 0.3s;
+        }
+
+        // default (closed)
+        .icon-chevron {
+          display: block;
+          opacity: 1;
+          transform: rotate(0);
+        }
+
+        .icon-minus {
+          opacity: 0;
+          display: none;
+          transform: rotate(-90deg);
+        }
+      }
+
+      .faq-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        p {
+          padding-bottom: $space-4;
+          color: $gray-color;
+          line-height: 1.6;
+        }
+      }
+
+      &.is-open {
+        .icon-chevron {
+          display: none;
+          opacity: 0;
+          transform: rotate(90deg);
+        }
+
+        .icon-minus {
+          display: block;
+          opacity: 1;
+          transform: rotate(0);
+        }
+
+        .faq-body {
+          max-height: 200px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.application-eligibility-section {
+  background-color: #ffffff;
+  text-align: center;
+
+
+  padding: $space-16 0;
+
+}
+
+.section-title {
+  color: $black-color;
+  text-align: center;
+  font-weight: $font-bold;
+  margin-bottom: $space-16;
+  text-transform: uppercase;
+  font-size: $font-2xl !important;
+
+  @include responsive(md) {
+    font-size: $font-3xl !important;
+  }
+
+  @include responsive(lg) {
+    font-size: $font-4xl !important;
+  }
+}
+
+.eligibility-cards-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+
+  @include responsive(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.eligibility-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: $radius-md;
+  text-align: left;
+//   min-height: 280px;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: $font-medium;
+    margin-top: auto;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+  }
+
+  &__arrow {
+    margin-left: 8px;
+    width: 14px;
+    height: 14px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.eligibility-card--blue {
+  background-color: $secondary-color;
+  color: #ffffff;
+
+ .eligibility-card__icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+}
+
+.eligibility-card--gray {
+  background-color: #949494;
+  color: #ffffff;
+
+
+
+  .eligibility-card__list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 13px;
+
+    li {
+      line-height: 20px !important;
+    }
+  }
+
+  .eligibility-card__link,
+  .eligibility-card__arrow {
+    display: none;
+  }
+}
+
+.eligibility-card__icon {
+  margin-bottom: 20px;
+  
+}
+
+.eligibility-card__title {
+  font-size: 18px;
+  font-weight: $font-bold;
+  line-height: 1.3;
+  margin-top: 10px;
+
+}
+
+.eligibility-card__subtitle {
+  font-size: 14px;
+  font-weight: $font-regular;
+  opacity: 0.8;
+  margin-top: 0px !important;
+}
+
+.eligibility-card--list {
+  justify-content: flex-start;
+
+  .eligibility-card__subtitle {
+    display: none;
+  }
+}

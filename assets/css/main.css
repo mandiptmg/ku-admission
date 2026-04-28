@@ -1,0 +1,1716 @@
+@charset "UTF-8";
+/* keep if you actually need it */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+/* =======================
+   COLORS
+   ======================= */
+/* =======================
+   TYPOGRAPHY
+   ======================= */
+/* =======================
+   SPACING SYSTEM
+   ======================= */
+/* =======================
+   BORDERS & RADIUS
+   ======================= */
+/* =======================
+   SHADOWS
+   ======================= */
+/* =======================
+   TRANSITIONS & EASING
+   ======================= */
+/* =======================
+   BREAKPOINTS
+   ======================= */
+/* =======================
+   Z-INDEX SCALE
+   ======================= */
+/* =======================
+   FORMS
+   ======================= */
+/* =======================
+   BUTTONS
+   ======================= */
+.ku-hero {
+  position: relative;
+  width: 100%;
+  min-height: 442px;
+  background-image: url("../images/hero_img.png");
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ku-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 78, 170, 0.7) 0%, rgba(0, 78, 170, 0.4) 50%, transparent 100%);
+  z-index: 1;
+}
+.ku-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding: 0;
+}
+@media (min-width: 60rem) {
+  .ku-hero__content {
+    max-width: 52%;
+  }
+}
+.ku-hero__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+  max-width: 500px;
+  font-size: 0.75rem !important;
+}
+@media (min-width: 60rem) {
+  .ku-hero__tag {
+    font-size: 15.19px !important;
+  }
+}
+.ku-hero__tag {
+  padding: 0.5rem 1rem;
+  border-radius: 14.33px;
+  margin: 1rem 0;
+  width: fit-content;
+  font-weight: 500;
+  background-color: rgba(24, 171, 184, 0.5);
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.ku-hero__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #18abb8;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+.ku-hero__title {
+  color: #ffffff;
+  font-size: 35px !important;
+  line-height: 1.1;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+}
+@media (min-width: 45rem) {
+  .ku-hero__title {
+    font-size: 50px !important;
+  }
+}
+@media (min-width: 60rem) {
+  .ku-hero__title {
+    font-size: 60px !important;
+  }
+}
+.ku-hero__text {
+  color: #ffffff;
+  max-width: 500px;
+  font-size: 0.875rem !important;
+}
+@media (min-width: 60rem) {
+  .ku-hero__text {
+    font-size: 17.17px !important;
+  }
+}
+.ku-hero__text {
+  line-height: 1.75;
+  font-weight: 400;
+}
+.ku-hero__actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-direction: column;
+}
+@media (min-width: 33.75rem) {
+  .ku-hero__actions {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.ku-hero .ku-btn {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+  width: 100%;
+}
+@media (min-width: 33.75rem) {
+  .ku-hero .ku-btn {
+    width: auto;
+  }
+}
+.ku-hero .ku-btn--primary {
+  background-color: #18abb8;
+  color: #ffffff;
+}
+.ku-hero .ku-btn--primary:hover {
+  background-color: rgb(18.1153846154, 129.0721153846, 138.8846153846);
+}
+.ku-hero .ku-btn--primary .ku-btn__arrow {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.ku-hero .ku-btn--secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.ku-hero .ku-btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+.ku-hero .ku-btn--secondary .ku-btn__icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.scholarships-section {
+  background-color: #004eaa;
+  padding: 5rem 28px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+.scholarships-section .section-title {
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+}
+@media (min-width: 45rem) {
+  .scholarships-section .section-title {
+    font-size: 2rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .scholarships-section .section-title {
+    font-size: 2.5rem !important;
+  }
+}
+.scholarships-section .scholarships-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 45rem) {
+  .scholarships-section .scholarships-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+.scholarships-section .scholarship-card {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+.scholarships-section .scholarship-card:hover {
+  transform: translateY(-10px);
+}
+.scholarships-section .scholarship-card:hover .arrow {
+  transform: translateX(10px);
+}
+.scholarships-section .scholarship-card .card-image {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+  margin-bottom: 28px;
+}
+.scholarships-section .scholarship-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.scholarships-section .scholarship-card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000000;
+  padding: 0.5rem 0.25rem;
+}
+.scholarships-section .scholarship-card .card-footer .label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+.scholarships-section .scholarship-card .card-footer .arrow {
+  font-size: 2rem;
+  font-weight: 300;
+  transition: transform 0.4s cubic-bezier(0, 0, 0.2, 1);
+  filter: brightness(0) saturate(100%) invert(11%) sepia(93%) saturate(19%) hue-rotate(13deg) brightness(90%) contrast(79%);
+}
+
+.admission-postgraduate {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+.admission-postgraduate .intro-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .intro-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.admission-postgraduate .intro-section .intro-image-wrapper {
+  position: relative;
+}
+.admission-postgraduate .intro-section .intro-image-wrapper .main-img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+.admission-postgraduate .intro-section .intro-image-wrapper .decorative-box {
+  position: absolute;
+  bottom: 0px;
+  right: 25px;
+  width: 50%;
+  height: 137px;
+  background: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .intro-section .intro-image-wrapper .decorative-box {
+    display: block;
+  }
+}
+.admission-postgraduate .intro-section .intro-content .title {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .intro-section .intro-content .title {
+    font-size: 1.5rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-postgraduate .intro-section .intro-content .title {
+    font-size: 30px !important;
+  }
+}
+.admission-postgraduate .intro-section .intro-content .description {
+  margin: 0 !important;
+  line-height: 1.75;
+  color: #000000;
+  font-weight: 400;
+  font-size: 0.875rem !important;
+}
+.admission-postgraduate .cta-banner {
+  display: flex;
+  flex-direction: column;
+  background-color: #2059a8;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .cta-banner {
+    flex-direction: row;
+  }
+}
+.admission-postgraduate .cta-banner .cta-info {
+  padding: 28px 2rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.admission-postgraduate .cta-banner .cta-info p {
+  margin: 0;
+  font-size: 1rem !important;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .cta-banner .cta-info p {
+    font-size: 1.125rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-postgraduate .cta-banner .cta-info p {
+    font-size: 21px !important;
+  }
+}
+.admission-postgraduate .cta-banner .cta-button {
+  background-color: #18abb8;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 28px 2.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .cta-banner .cta-button {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-postgraduate .cta-banner .cta-button {
+    font-size: 21px;
+  }
+}
+.admission-postgraduate .cta-banner .cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+.admission-postgraduate .cta-banner .cta-button:hover {
+  background-color: rgb(21.0576923077, 150.0360576923, 161.4423076923);
+}
+.admission-postgraduate .cta-banner .cta-button:hover .arrow {
+  transform: translateX(5px);
+}
+.admission-postgraduate .cta-banner .cta-button .arrow {
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+.admission-postgraduate .features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 60rem) {
+  .admission-postgraduate .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.admission-postgraduate .features-grid .feature-card {
+  background-color: #ecedf4;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.admission-postgraduate .features-grid .feature-card:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-3px);
+}
+.admission-postgraduate .features-grid .feature-card .icon {
+  width: 100%;
+  height: 100%;
+  max-width: 32px;
+  max-height: 32px;
+  color: #004eaa;
+}
+.admission-postgraduate .features-grid .feature-card .feature-label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 700;
+  color: #000000;
+  font-size: 0.875rem;
+}
+.admission-postgraduate .programs-hero {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 400px;
+}
+.admission-postgraduate .programs-hero .hero-bg {
+  width: 100%;
+  max-height: 356px;
+  height: 100%;
+  object-fit: cover;
+}
+.admission-postgraduate .programs-hero .hero-card {
+  position: absolute;
+  margin-top: -1.9rem;
+  margin-left: 2rem;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  background-color: #18abb8;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 320px;
+  color: #ffffff;
+  padding-bottom: 3rem;
+}
+.admission-postgraduate .programs-hero .hero-card__title {
+  font-size: 1.25rem !important;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .programs-hero .hero-card__title {
+    font-size: 1.5rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-postgraduate .programs-hero .hero-card__title {
+    font-size: 28.17px !important;
+  }
+}
+.admission-postgraduate .programs-hero .hero-card__title {
+  font-weight: 700;
+}
+.admission-postgraduate .programs-hero .hero-card .explore-btn {
+  margin-top: 28px;
+  position: absolute;
+  background-color: #ffffff;
+  color: #18abb8;
+  padding: 0.75rem 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+@media (min-width: 45rem) {
+  .admission-postgraduate .programs-hero .hero-card .explore-btn {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-postgraduate .programs-hero .hero-card .explore-btn {
+    font-size: 1.125rem;
+  }
+}
+.admission-postgraduate .programs-hero .hero-card .explore-btn:hover {
+  background-color: #e5e7eb;
+}
+.admission-postgraduate .programs-hero .hero-card .explore-btn:hover .arrow {
+  transform: translateX(5px);
+}
+.admission-postgraduate .programs-hero .hero-card .explore-btn .arrow {
+  transition: transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(71%) sepia(59%) saturate(5609%) hue-rotate(146deg) brightness(94%) contrast(81%);
+}
+
+.admission-undergraduate {
+  padding: 4rem 0;
+  background-color: #ecedf4;
+}
+.admission-undergraduate .intro-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .intro-section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.admission-undergraduate .intro-section .intro-image-wrapper {
+  position: relative;
+}
+.admission-undergraduate .intro-section .intro-image-wrapper .main-img {
+  width: 100%;
+  border-radius: 1rem;
+  display: block;
+}
+.admission-undergraduate .intro-section .intro-content .title {
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000000;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .intro-section .intro-content .title {
+    font-size: 1.5rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-undergraduate .intro-section .intro-content .title {
+    font-size: 30px !important;
+  }
+}
+.admission-undergraduate .intro-section .intro-content .description {
+  margin: 0 !important;
+  font-size: 0.875rem !important;
+  line-height: 1.75;
+  color: #000000;
+  font-weight: 400;
+}
+.admission-undergraduate .cta-banner {
+  display: flex;
+  flex-direction: column;
+  background-color: #2059a8;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .cta-banner {
+    flex-direction: row;
+  }
+}
+.admission-undergraduate .cta-banner .cta-info {
+  padding: 28px 2rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.admission-undergraduate .cta-banner .cta-info p {
+  margin: 0;
+  font-size: 1rem !important;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .cta-banner .cta-info p {
+    font-size: 1.125rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-undergraduate .cta-banner .cta-info p {
+    font-size: 21px !important;
+  }
+}
+.admission-undergraduate .cta-banner .cta-button {
+  background-color: #18abb8;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 28px 2.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .cta-banner .cta-button {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 60rem) {
+  .admission-undergraduate .cta-banner .cta-button {
+    font-size: 21px;
+  }
+}
+.admission-undergraduate .cta-banner .cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-width: 280px;
+  transition: all 0.3s ease;
+}
+.admission-undergraduate .cta-banner .cta-button:hover {
+  background-color: rgb(21.0576923077, 150.0360576923, 161.4423076923);
+}
+.admission-undergraduate .cta-banner .cta-button:hover .arrow {
+  transform: translateX(5px);
+}
+.admission-undergraduate .cta-banner .cta-button .arrow {
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+.admission-undergraduate .features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 60rem) {
+  .admission-undergraduate .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.admission-undergraduate .features-grid .feature-card {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.admission-undergraduate .features-grid .feature-card:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+.admission-undergraduate .features-grid .feature-card .icon {
+  width: 100%;
+  height: 100%;
+  max-width: 32px;
+  max-height: 32px;
+  color: #004eaa;
+}
+.admission-undergraduate .features-grid .feature-card .feature-label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 700;
+  color: #000000;
+  font-size: 0.875rem;
+}
+.admission-undergraduate {
+  /* ── Grid ── */
+}
+.admission-undergraduate .cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.admission-undergraduate {
+  /* ── Card ── */
+}
+.admission-undergraduate .card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.admission-undergraduate .card .card {
+  aspect-ratio: 4/3;
+}
+@media (min-width: 45rem) {
+  .admission-undergraduate .card {
+    aspect-ratio: 3/4;
+  }
+}
+.admission-undergraduate .card {
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.admission-undergraduate .card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+}
+.admission-undergraduate {
+  /* ── Photo ── */
+}
+.admission-undergraduate .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.admission-undergraduate .card:hover .card-img {
+  transform: scale(1.04);
+}
+.admission-undergraduate {
+  /* ── Gradient overlay ── */
+}
+.admission-undergraduate .card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 100%, rgba(10, 22, 50, 0.55) 40%, rgba(8, 18, 45, 0.9) 60%);
+}
+.admission-undergraduate {
+  /* ── Bottom content ── */
+}
+.admission-undergraduate .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 18px 20px;
+}
+.admission-undergraduate {
+  /* ── Category pill ── */
+}
+.admission-undergraduate .card-tag {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid rgba(156, 163, 175, 0.5);
+  border-radius: 12.72px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.admission-undergraduate .tag-engineering {
+  background: rgba(0, 78, 170, 0.4);
+}
+.admission-undergraduate .tag-medicine {
+  background: rgba(46, 230, 232, 0.5);
+}
+.admission-undergraduate .tag-science {
+  background: rgba(249, 175, 47, 0.5);
+}
+.admission-undergraduate {
+  /* ── Title ── */
+}
+.admission-undergraduate .card-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.admission-undergraduate {
+  /* ── Subtitle ── */
+}
+.admission-undergraduate .card-sub {
+  font-size: 12px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.5;
+}
+.admission-undergraduate .card-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.25rem;
+  margin-bottom: 1rem;
+}
+.admission-undergraduate {
+  /* ── Arrow button ── */
+}
+.admission-undergraduate .card-btn {
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+.admission-undergraduate .card:hover .card-btn {
+  background: rgba(156, 163, 175, 0.5);
+  border-color: #fff;
+}
+
+.support-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+.support-section .faq-container {
+  margin-bottom: 3rem;
+}
+.support-section .faq-container .faq-title {
+  color: #004eaa !important;
+  font-weight: 700;
+  margin-bottom: 28px;
+  font-size: 1.5rem !important;
+}
+@media (min-width: 45rem) {
+  .support-section .faq-container .faq-title {
+    font-size: 2rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .support-section .faq-container .faq-title {
+    font-size: 2.5rem !important;
+  }
+}
+.support-section .faq-container .faq-item {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+.support-section .faq-container .faq-item .faq-header {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.support-section .faq-container .faq-item .faq-header .icon {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  transition: transform 0.3s;
+}
+.support-section .faq-container .faq-item .faq-header .icon-chevron {
+  display: block;
+  opacity: 1;
+  transform: rotate(0);
+}
+.support-section .faq-container .faq-item .faq-header .icon-minus {
+  opacity: 0;
+  display: none;
+  transform: rotate(-90deg);
+}
+.support-section .faq-container .faq-item .faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.support-section .faq-container .faq-item .faq-body p {
+  padding-bottom: 1rem;
+  color: #666666;
+  line-height: 1.6;
+}
+.support-section .faq-container .faq-item.is-open .icon-chevron {
+  display: none;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.support-section .faq-container .faq-item.is-open .icon-minus {
+  display: block;
+  opacity: 1;
+  transform: rotate(0);
+}
+.support-section .faq-container .faq-item.is-open .faq-body {
+  max-height: 200px;
+}
+.support-section .links-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+@media (min-width: 45rem) {
+  .support-section .links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.support-section .links-grid .action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+.support-section .links-grid .action-btn .text {
+  font-size: 0.875rem;
+}
+.support-section .links-grid .action-btn:hover {
+  opacity: 0.9;
+}
+.support-section .links-grid .action-btn .action-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.support-section .links-grid .action-btn .action-meta .separator {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.support-section .links-grid .action-btn .action-meta .label {
+  font-size: 0.875rem;
+}
+.support-section .links-grid .action-btn.bg-primary {
+  background-color: #004eaa;
+}
+.support-section .links-grid .action-btn.bg-slate {
+  background-color: #5d748d;
+}
+.support-section .links-grid .action-btn.bg-navy {
+  background-color: #1e3a5f;
+}
+.support-section .links-grid .action-btn.bg-dark {
+  background-color: #2c3e50;
+}
+.support-section .contact-section {
+  display: grid;
+  place-items: start;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+}
+@media (min-width: 60rem) {
+  .support-section .contact-section {
+    grid-template-columns: 1.5fr 3.5fr;
+    align-items: start;
+  }
+}
+.support-section .contact-section .main-title {
+  font-size: 1.5rem;
+}
+@media (min-width: 45rem) {
+  .support-section .contact-section .main-title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 60rem) {
+  .support-section .contact-section .main-title {
+    font-size: 35.98px;
+  }
+}
+.support-section .contact-section .main-title {
+  color: #004eaa;
+  font-weight: 700;
+  max-width: 400px;
+}
+.support-section .contact-section .sub-title {
+  font-weight: 700;
+  color: #000000;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 45rem) {
+  .support-section .contact-section .sub-title {
+    font-size: 1.125rem;
+  }
+}
+@media (min-width: 60rem) {
+  .support-section .contact-section .sub-title {
+    font-size: 22px;
+  }
+}
+.support-section .contact-section .contact-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (min-width: 45rem) {
+  .support-section .contact-section .contact-cards {
+    gap: 0.5rem;
+  }
+}
+.support-section .contact-section .contact-cards {
+  flex-wrap: wrap;
+}
+.support-section .contact-section .contact-cards .info-card {
+  background: #ffffff;
+  padding: 28px 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+.support-section .contact-section .contact-cards .info-card .icon {
+  font-size: 1.25rem;
+  color: #333333;
+}
+.support-section .contact-section .contact-cards .info-card .details .type {
+  display: block;
+  font-size: 0.75rem;
+}
+@media (min-width: 45rem) {
+  .support-section .contact-section .contact-cards .info-card .details .type {
+    font-size: 0.875rem;
+  }
+}
+.support-section .contact-section .contact-cards .info-card .details .type {
+  margin-bottom: 4px;
+  color: #666666;
+  font-weight: 500;
+}
+.support-section .contact-section .contact-cards .info-card .details .value {
+  font-size: 0.875rem;
+  display: block;
+  color: #000000;
+  font-weight: 700;
+}
+
+.admissions-timeline {
+  background: #f8f9fb;
+  padding: 4rem 0;
+}
+.admissions-timeline .section-title {
+  color: #000000;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+}
+@media (min-width: 45rem) {
+  .admissions-timeline .section-title {
+    font-size: 2rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .admissions-timeline .section-title {
+    font-size: 2.5rem !important;
+  }
+}
+.admissions-timeline .section-subtitle {
+  color: #666666;
+  font-size: 0.875rem;
+}
+.admissions-timeline {
+  /* ── Container ── */
+}
+.admissions-timeline .timeline-wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.admissions-timeline {
+  /* ── Legend ── */
+}
+.admissions-timeline .legend {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 2.5rem 0;
+}
+.admissions-timeline .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #4a5568;
+}
+.admissions-timeline .legend-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.admissions-timeline {
+  /* ── Timeline Body ── */
+}
+.admissions-timeline .timeline {
+  display: flex;
+  flex-direction: column;
+}
+.admissions-timeline {
+  /* ── Row ── */
+}
+.admissions-timeline .timeline-row {
+  display: flex;
+  align-items: stretch;
+}
+.admissions-timeline .timeline-row:last-child {
+  border-bottom: none;
+}
+.admissions-timeline {
+  /* ── Date Column ── */
+}
+.admissions-timeline .date-col {
+  width: 130px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 20px 14px 20px 0;
+  font-size: 13px;
+  color: #718096;
+  text-align: right;
+  line-height: 1.4;
+  padding-top: 22px;
+}
+.admissions-timeline {
+  /* ── Spine Column ── */
+}
+.admissions-timeline .spine-col {
+  width: 44px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.admissions-timeline .spine-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  background: #cbd5e0;
+  z-index: 0;
+}
+.admissions-timeline .timeline-row:first-child .spine-line {
+  top: 32px;
+}
+.admissions-timeline .timeline-row:last-child .spine-line {
+  bottom: calc(100% - 32px);
+}
+.admissions-timeline .step-badge {
+  position: relative;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 18px;
+  flex-shrink: 0;
+}
+.admissions-timeline {
+  /* ── Content Column ── */
+}
+.admissions-timeline .content-col {
+  flex: 1;
+  padding: 0 16px 0 12px;
+}
+.admissions-timeline {
+  /* ── Accordion ── */
+}
+.admissions-timeline .accordion {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  border: 1px solid #e5e7eb;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.admissions-timeline .accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  gap: 12px;
+}
+.admissions-timeline .accordion-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #001b48;
+  line-height: 1.35;
+}
+.admissions-timeline .accordion-chevron {
+  color: #a0aec0;
+  font-size: 16px;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+  user-select: none;
+}
+.admissions-timeline .accordion.open .accordion-chevron {
+  transform: rotate(180deg);
+}
+.admissions-timeline .accordion-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.admissions-timeline .accordion.open .accordion-body {
+  max-height: 300px;
+}
+.admissions-timeline .accordion-content {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.6;
+  padding-bottom: 18px;
+}
+.admissions-timeline {
+  /* ── Right-side card column ── */
+}
+.admissions-timeline .right-col {
+  width: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 18px;
+  padding-right: 10px;
+  justify-content: flex-end;
+}
+.admissions-timeline {
+  /* ── Color classes ── */
+  /* Application = blue */
+}
+.admissions-timeline .bg-blue {
+  background: #1a73e8;
+}
+.admissions-timeline {
+  /* Testing & Review = orange */
+}
+.admissions-timeline .bg-orange {
+  background: #e8710a;
+}
+.admissions-timeline {
+  /* Offers = green */
+}
+.admissions-timeline .bg-green {
+  background: #34a853;
+}
+.admissions-timeline {
+  /* Deadlines = red */
+}
+.admissions-timeline .bg-red {
+  background: #d93025;
+}
+
+.application-eligibility-section {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.section-title {
+  color: #000000;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-size: 1.5rem !important;
+}
+@media (min-width: 45rem) {
+  .section-title {
+    font-size: 2rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .section-title {
+    font-size: 2.5rem !important;
+  }
+}
+
+.eligibility-cards-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+}
+@media (min-width: 45rem) {
+  .eligibility-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 60rem) {
+  .eligibility-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.eligibility-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+.eligibility-card__link {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: auto;
+  transition: transform 0.2s ease;
+}
+.eligibility-card__link:hover {
+  transform: translateX(5px);
+}
+.eligibility-card__arrow {
+  margin-left: 8px;
+  width: 14px;
+  height: 14px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.eligibility-card--blue {
+  background-color: #2059a8;
+  color: #ffffff;
+}
+.eligibility-card--blue .eligibility-card__icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.eligibility-card--gray {
+  background-color: #949494;
+  color: #ffffff;
+}
+.eligibility-card--gray .eligibility-card__list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.eligibility-card--gray .eligibility-card__list li {
+  line-height: 20px !important;
+}
+.eligibility-card--gray .eligibility-card__link,
+.eligibility-card--gray .eligibility-card__arrow {
+  display: none;
+}
+
+.eligibility-card__icon {
+  margin-bottom: 20px;
+}
+
+.eligibility-card__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 10px;
+}
+
+.eligibility-card__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0px !important;
+}
+
+.eligibility-card--list {
+  justify-content: flex-start;
+}
+.eligibility-card--list .eligibility-card__subtitle {
+  display: none;
+}
+
+.important-policies {
+  background: #f8f9fb;
+  text-align: center;
+  padding: 4rem 0;
+}
+.important-policies .section-title {
+  color: #000000;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+  font-size: 1.125rem !important;
+}
+@media (min-width: 45rem) {
+  .important-policies .section-title {
+    font-size: 1.25rem !important;
+  }
+}
+@media (min-width: 60rem) {
+  .important-policies .section-title {
+    font-size: 25px !important;
+  }
+}
+.important-policies .important-policies-container .faq-item {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+.important-policies .important-policies-container .faq-item .faq-header {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  color: #333333;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.important-policies .important-policies-container .faq-item .faq-header .icon {
+  font-size: 0.75rem;
+  opacity: 0.5;
+  transition: transform 0.3s;
+}
+.important-policies .important-policies-container .faq-item .faq-header .icon-chevron {
+  display: block;
+  opacity: 1;
+  transform: rotate(0);
+}
+.important-policies .important-policies-container .faq-item .faq-header .icon-minus {
+  opacity: 0;
+  display: none;
+  transform: rotate(-90deg);
+}
+.important-policies .important-policies-container .faq-item .faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.important-policies .important-policies-container .faq-item .faq-body p {
+  padding-bottom: 1rem;
+  color: #666666;
+  line-height: 1.6;
+}
+.important-policies .important-policies-container .faq-item.is-open .icon-chevron {
+  display: none;
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.important-policies .important-policies-container .faq-item.is-open .icon-minus {
+  display: block;
+  opacity: 1;
+  transform: rotate(0);
+}
+.important-policies .important-policies-container .faq-item.is-open .faq-body {
+  max-height: 200px;
+  text-align: left;
+}
+
+.button-shape {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+  background-color: #004eaa;
+  color: #ffffff;
+  padding: 12px 19px;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: 18px;
+}
+.button-shape:hover {
+  background-color: #092f6c;
+}
+
+.button-shape-primary {
+  background: #004eaa;
+  color: #ffffff;
+}
+.button-shape-primary:hover {
+  background: #2059a8;
+}
+
+.button-shape-contact {
+  background: #004eaa;
+  color: #ffffff;
+  border-radius: 6px;
+  display: inline-block;
+  padding: 9px 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: 10.42px;
+}
+.button-shape-contact:hover {
+  background: #2059a8;
+}
+
+.button-shape-black {
+  background: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+}
+.button-shape-black:hover {
+  color: #ffffff;
+  background: #2059a8;
+  border: 1px solid #2059a8;
+}
+
+.button-shape-dark {
+  background: #004eaa;
+  color: #ffffff;
+}
+.button-shape-dark:hover {
+  background: #000000;
+}
+
+/* Prevent synthetic bold/italic when additional weights aren't loaded */
+* {
+  font-synthesis: none;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif !important;
+}
+@media (min-width: 82.5rem) {
+  .container {
+    width: 71.688rem;
+  }
+}
+.container {
+  max-width: 1147px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.scroll-top-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  width: 50px;
+  z-index: 99;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+}
+.scroll-top-btn:hover {
+  background-color: #004eaa;
+  transform: scale(1.2);
+}
+
+.scroll-top-btn .scroll-btn {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  rotate: 90deg;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@media (min-width: 33.75rem) {
+  .scroll-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    animation: bounceIn 0.6s ease forwards;
+  }
+}
+.scroll-top-btn.show {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* scroll top animation */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(50px) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px) scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(5px) scale(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+/* VIDEO MODAL */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+.video-modal.active {
+  display: flex;
+}
+.video-modal__content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.video-modal.active .video-modal__content {
+  transform: scale(1);
+  opacity: 1;
+}
+.video-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

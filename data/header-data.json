@@ -1,0 +1,41 @@
+[
+  {
+    "key": "admissions",
+    "label": "ADMISSIONS",
+    "mega": [
+      {
+        "title": "Undergraduate Admissions",
+        "links": [
+          { "label": "Undergraduate Admissions", "url": "#" },
+          { "label": "Scholarships", "url": "#" }
+        ]
+      },
+      {
+        "title": "Postgraduate Admissions",
+        "links": [
+          { "label": "Postgraduate Admissions", "url": "#" }
+        ]
+      }
+    ]
+  },
+  {
+    "key": "academics",
+    "label": "ACADEMICS"
+  },
+  {
+    "key": "research",
+    "label": "RESEARCH OFFICE"
+  },
+  {
+    "key": "student-life",
+    "label": "STUDENT LIFE"
+  },
+  {
+    "key": "news",
+    "label": "NEWS & EVENTS"
+  },
+  {
+    "key": "about",
+    "label": "ABOUT"
+  }
+]
