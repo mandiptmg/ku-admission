@@ -6,35 +6,35 @@
 
   text-align: center;
 
-  padding: $space-16 0;
+  padding-bottom: $space-16 ;
 
   .section-title {
     color: $black-color;
     text-align: left;
     font-weight: $font-bold;
-    margin-bottom: $space-16;
+    margin-bottom: $space-4;
     text-transform: capitalize;
     font-size: $font-lg !important;
 
-    @include responsive(md) {
-      font-size: $font-xl !important;
-    }
+    // @include responsive(md) {
+    //   font-size: $font-xl !important;
+    // }
 
-    @include responsive(lg) {
-      font-size: 25px !important;
-    }
+    // @include responsive(lg) {
+    //   font-size: 25px !important;
+    // }
   }
 
   .important-policies-container {
+    background: #fff;
+    border: 1px solid rgba($black-color, 0.2);
+    padding: $space-6;
+    border-radius: $radius-10;
     .faq-item {
-      border: 1px solid rgba($black-color, 0.5);
-      margin-bottom: $space-4;
-      padding: 0 $space-4;
-      border-radius: $radius-10;
+      // border: 1px solid rgba($black-color, 0.5);
 
       .faq-header {
         width: 100%;
-        padding: $space-4 0;
         @include flex-center;
         justify-content: space-between;
         background: none;
@@ -42,15 +42,35 @@
         cursor: pointer;
         text-align: left;
         font-size: $font-base;
-        color: $gray-dark;
+        color: $gray-color;
         font-size: $font-sm;
-        font-weight: 600;
+        font-weight: 300;
+
         // @include responsive(md) {
         //   font-size: $font-base;
         // }
         // @include responsive(lg) {
         //   font-size: $font-lg;
         // }
+
+        position: relative;
+        padding-left: 26px;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 13px;
+          height: 13px;
+          border: 4px solid  #1565c0;
+          border-radius: 50%;
+          box-sizing: border-box;
+          background-color: transparent;
+        }
 
         .icon {
           font-size: $font-xs;

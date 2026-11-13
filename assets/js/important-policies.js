@@ -11,14 +11,10 @@ function initFAQ() {
       <div class="faq-item">
         <button class="faq-header">
           <span>${item.question}</span>
-          <span class="icon-wrapper">
-            <img class="icon icon-chevron" src="assets/images/chevron.png" alt="open"/>
-            <img class="icon icon-minus" src="assets/images/minus.png" alt="close"/>
-          </span>
+       
         </button>
 
-        <div class="faq-body"><p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur corrupti, earum nobis mollitia, fuga amet blanditiis veniam saepe soluta fugit sequi facere tenetur omnis laborum non, eos cum eum autem.</p></div>
+        <div class="faq-body"></div>
       </div>
     `,
   ).join(""); // 🔥 important!

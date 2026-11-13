@@ -27,7 +27,6 @@ export const faqs = [
   },
 ];
 
-
 export const Importantfaqs = [
   {
     question: "Document submission & automatic rejection policy",
@@ -50,27 +49,36 @@ export const Importantfaqs = [
       "Requirements and steps for accepting an admission offer from Khalifa University, including deadlines, necessary paperwork, and any initial fees or confirmations required.", // This answer is inferred
   },
   {
+    question:
+      "Test notifications are issued at least 2 weeks in advance. One reschedule is allowed, requested at least 3 days before the test date.",
+  },
+  {
+    question:
+      " No-shows result in automatic rejection; late-interest applicants are placed on a wait list with lower priority.",
+  },
+  {
     question: "Seat holding deposit",
     answer:
       "Information about the mandatory seat holding deposit, including the amount, payment methods, refund policy, and deadlines for submission to secure your admission.", // This answer is inferred
   },
 ];
 
-
 export const dates = [
-   {
+  {
     day: "18",
     month: "AUG",
     fullDate: "MONDAY, AUGUST 18",
     title:
       "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
-  }, {
+  },
+  {
     day: "18",
     month: "AUG",
     fullDate: "MONDAY, AUGUST 18",
     title:
       "Applications open – UAE Nationals & Children of Emirati Mothers (Grade 12)",
-  }, {
+  },
+  {
     day: "18",
     month: "AUG",
     fullDate: "MONDAY, AUGUST 18",

@@ -1,0 +1,264 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.site-footer {
+  color: $white-color;
+  font-family: Arial, sans-serif;
+
+  h4 {
+    font-size: 20px;
+    font-weight: $font-bold;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+    width: 100%;
+
+    @include responsive(md) {
+      grid-template-columns: 3fr 1fr;
+      gap: 8rem;
+    }
+  }
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    @include responsive(md) {
+      justify-content: space-between;
+      flex-direction: row;
+    gap: 2rem;
+
+    }
+  }
+
+  &__img {
+    max-height: 70px;
+    object-fit: contain;
+  }
+
+  &__top {
+    background: $primary-dark url(../images/footer-bgs.png) no-repeat center
+      bottom;
+    background-size: 50%;
+    padding: 50px 0;
+    // border-bottom: 1px solid $border-color;
+  }
+
+  &__bottom {
+    background: $secondary-dark;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: $white-color;
+    text-transform: uppercase;
+  }
+}
+
+/* =========================
+   Footer Location
+========================= */
+.footer-location {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    vertical-align: middle;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 2rem; 
+    margin-bottom: 25px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+      flex: 1 1 1; 
+    }
+
+    &__address {
+      color: $primary-color;
+    }
+
+    &__phone a {
+      font-weight: 600;
+    }
+  }
+}
+
+
+/* =========================
+   Newsletter
+========================= */
+.footer-newsletter {
+  margin-top: 30px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__error {
+    color: red;
+    margin-bottom: 10px;
+  }
+
+  &__success {
+    color: green;
+    margin-bottom: 10px;
+  }
+
+  &__form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #fff;
+    padding: 7px 0;
+  }
+
+  &__input {
+    flex: 1;
+    padding: 0px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 12px;
+    background: transparent;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    background: $primary-color;
+    border: none;
+    color: #fff;
+    padding: 7px 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 12px;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: darken($primary-color, 8%);
+    }
+  }
+}
+
+/* =========================
+   Social Links
+========================= */
+.footer-social {
+  margin-top: 35px;
+
+  &__title {
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+
+  &__item:hover img {
+    transform: translateY(-3px);
+  }
+}
+
+/* =========================
+   Quick Links
+========================= */
+.footer-links {
+  flex: 1 1 200px;
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__link {
+    font-size: 14px;
+    transition: color 0.3s ease;
+    color: $footer-color;
+    margin-right: 12px;
+
+    &:hover {
+      color: $gray-lighter;
+    }
+  }
+}
+
+// /* =========================
+//    Responsive
+// ========================= */
+// @media (max-width: 768px) {
+//   .site-footer__container {
+//     flex-direction: column;
+//   }
+
+//   .footer-newsletter__form {
+//     flex-direction: column;
+//   }
+
+//   .footer-social__item img {
+//     width: 28px;
+//     height: 28px;
+//   }
+// }

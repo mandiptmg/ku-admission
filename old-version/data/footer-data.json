@@ -1,0 +1,100 @@
+{
+  "address": {
+    "text": "P.O. Box: 127788,\nAbu Dhabi, UAE",
+    "icon": "../assets/images/footer-address.png"
+  },
+  "phone": {
+    "text": "+971 (2) 312 3333",
+    "icon": "../assets/images/footer-phone.png"
+  },
+  "contact": {
+    "url": "https://www.ku.ac.ae/contact",
+    "text": "Reach us",
+    "icon": "../assets/images/footer-email.png"
+  },
+
+  "newsletter": {
+    "title": "Get The Latest News From KHALIFA UNIVERSITY"
+  },
+
+  "social_links": [
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/khalifauniversity/",
+      "icon": "../assets/images/social_icon/footer-fb.png"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/user/KhalifaUniversity",
+      "icon": "../assets/images/social_icon/footer-yt.png"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/KhalifaUni",
+      "icon": "../assets/images/social_icon/footer-twt.png"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/khalifauniversity",
+      "icon": "../assets/images/social_icon/footer-inst.png"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/school/khalifa-university-/",
+      "icon": "../assets/images/social_icon/footer-lin.png"
+    },
+    {
+      "name": "Whatsapp Channel",
+      "url": "https://www.whatsapp.com/channel/0029Va5xAeH2Jl8LlJULDo0u",
+      "icon": "../assets/images/social_icon/footer-wtsp.png"
+    },
+    {
+      "name": "Whatsapp Business",
+      "url": "https://wa.me/+971565333214",
+      "icon": "../assets/images/social_icon/footer-wtsp-bsns.png"
+    }
+  ],
+
+  "quick_links": [
+    {
+      "label": "Colleges",
+      "url": "https://www.ku.ac.ae/colleges"
+    },
+    {
+      "label": "Research",
+      "url": "https://www.ku.ac.ae/research"
+    },
+    {
+      "label": "University Leadership",
+      "url": "https://www.ku.ac.ae/about/university-leadership"
+    },
+    {
+      "label": "Partnership",
+      "url": "https://www.ku.ac.ae/about/strategic-partnerships"
+    },
+    {
+      "label": "Achievements & Rankings",
+      "url": "https://www.ku.ac.ae/about/rankings-old"
+    },
+    {
+      "label": "General FAQ",
+      "url": "https://www.ku.ac.ae/about/general-faqs-old"
+    },
+    {
+      "label": "Covid 19",
+      "url": "https://www.ku.ac.ae/covid-19"
+    },
+    {
+      "label": "Center for Teaching and Learning (CTL)",
+      "url": "https://www.ku.ac.ae/academics/center-for-teaching-and-learning"
+    },
+    {
+      "label": "Technology, Management & Innovation",
+      "url": "https://www.ku.ac.ae/research-offices/technology-management-innovation"
+    },
+    {
+      "label": "Open Data",
+      "url": "https://www.ku.ac.ae/open-data"
+    }
+  ]
+}

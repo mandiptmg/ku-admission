@@ -1,0 +1,194 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.ku-hero {
+  position: relative;
+  width: 100%;
+  min-height: 442px;
+  background-image: url("../images/hero_img.png");
+  background-position: center !important;
+  background-size: cover !important;
+
+  background-repeat: no-repeat !important;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba($primary-color, 0.7) 0%,
+      rgba($primary-color, 0.4) 50%,
+      transparent 100%
+    );
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    padding: 0;
+    @include responsive(lg) {
+    max-width: 52%;
+    }
+
+  }
+
+  &__tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: #ffffff;
+    max-width: 500px;
+    font-size: $font-xs !important;
+
+    @include responsive(lg) {
+      font-size: 15.19px !important;
+    }
+
+    padding: 0.5rem 1rem;
+    border-radius: 14.33px;
+    margin: 1rem 0;
+    width: fit-content;
+    font-weight: $font-medium;
+
+    background-color: rgba($hover-color, 0.5);
+    text-transform: uppercase;
+    border: 1px solid $border-color;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    background-color: $hover-color;
+    border-radius: $radius-full;
+    flex-shrink: 0;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 35px !important;
+    line-height: 1.1;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+
+    @include responsive(md) {
+      font-size: 50px !important;
+    }
+
+    @include responsive(lg) {
+      font-size: 60px !important;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+    max-width: 500px;
+    font-size: $font-sm !important;
+
+    @include responsive(lg) {
+      font-size: 17.17px !important;
+    }
+
+    line-height: $line-relaxed;
+    font-weight: $font-regular;
+  }
+
+  // Button styles integrated here
+  &__actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px; // Adjust spacing from the text above
+    flex-direction: column; // Stack buttons vertically
+
+    @include responsive(sm) {
+      // Example responsive break for smaller screens
+      flex-direction: row; // Stack buttons vertically
+      align-items: flex-start; // Align them to the left
+    }
+  }
+
+  .ku-btn {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px; // Adjust padding as needed
+    border: none;
+    border-radius: $radius-10; // Using your variable if it's small, or a specific value like 6px
+    font-family: inherit; // Use the hero's font
+    font-size: 14px; // Adjust font size
+    font-weight: $font-regular; // Using your variable
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+    white-space: nowrap; // Prevents text from wrapping inside the button
+    width: 100%;
+
+    // Responsive adjustment for full width on small screens
+    @include responsive(sm) {
+      width: auto;
+    }
+  }
+
+  .ku-btn--primary {
+    background-color: $hover-color; // Using $hover-color assuming it's the bright blue
+    color: #ffffff; // White text
+
+    &:hover {
+      background-color: darken(
+        $hover-color,
+        10%
+      ); // Slightly darker blue on hover
+    }
+
+    .ku-btn__arrow {
+      display: inline-block;
+      width: 14px; // Adjust arrow size
+      height: 14px;
+      margin-left: 10px;
+      // Using an SVG from your `mixins` or directly if not available.
+      // For now, I'll keep the data-uri, but if you have an icon mixin, use that.
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>'); // White right arrow SVG
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .ku-btn--secondary {
+    background-color: rgba(#ffffff, 0.2); // Translucent white from the image
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    color: #ffffff; // White text
+    border: 1px solid rgba(#ffffff, 0.4); // Subtle white border
+
+    &:hover {
+      background-color: rgba(#ffffff, 0.3); // Slightly more opaque on hover
+      border-color: rgba(#ffffff, 0.6);
+    }
+
+    .ku-btn__icon {
+      display: inline-block;
+      width: 16px; // Adjust icon size
+      height: 16px;
+      margin-right: 8px; // Space between icon and text
+      // Placeholder for play icon - you'd replace this with an actual SVG or font icon
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ffffff" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>'); // White play icon SVG
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+}

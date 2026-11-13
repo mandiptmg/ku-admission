@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- <title>Khalifa University – IEEE EMBS</title> -->
   <title>
-    Khalifa University - Admissions
+    Undergraduate Admission - Khalifa University
   </title>
 
   <!-- Favicon for standard browsers -->
@@ -46,24 +46,24 @@
         </p>
 
         <div class="ku-hero__actions">
-          <a href="#" class="ku-btn ku-btn--primary">Apply Now <span class="ku-btn__arrow"></span></a>
-            <!-- VIDEO BUTTON -->
-        <a href="#" id="open-video" class="ku-btn ku-btn--secondary" aria-label="Play Admissions Video">
+          <a href="https://ugapply.ku.ac.ae/portal/ug_landing" class="ku-btn ku-btn--primary">Apply Now <span class="ku-btn__arrow"></span></a>
+          <!-- VIDEO BUTTON -->
+          <a href="#" id="open-video" class="ku-btn ku-btn--secondary" aria-label="Play Admissions Video">
 
-          <span class="ku-btn__text">Admissions Journey</span>
-          <span class="ku-btn__divider">|</span>
+            <span class="ku-btn__text">Admissions Journey</span>
+            <span class="ku-btn__divider">|</span>
 
-          <span class="ku-btn__icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </span>
+            <span class="ku-btn__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
 
-          <span class="ku-btn__text">Play Video</span>
+            <span class="ku-btn__text">Play Video</span>
 
-        </a>
+          </a>
         </div>
       </div>
       <div class="video-overlay">
@@ -71,24 +71,24 @@
       </div>
   </section>
 
-<!-- VIDEO MODAL -->
-<div id="video-modal" class="video-modal">
-  <div class="video-modal__content">
+  <!-- VIDEO MODAL -->
+  <div id="video-modal" class="video-modal">
+    <div class="video-modal__content">
 
-    <!-- CLOSE -->
-    <button id="close-modal" class="video-modal__close">✕</button>
+      <!-- CLOSE -->
+      <button id="close-modal" class="video-modal__close">✕</button>
 
-    <!-- IFRAME -->
-    <iframe
-      id="video-iframe"
-      src=""
-      title="Admissions Video"
-      allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
+      <!-- IFRAME -->
+      <iframe
+        id="video-iframe"
+        src=""
+        title="Admissions Video"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
 
+    </div>
   </div>
-</div>
 
   <!-- eligibility -->
   <section class="application-eligibility-section">
@@ -120,7 +120,7 @@
           </div>
           <ul class="eligibility-card__list">
             <li>&rarr; Successful completion of Grade 12 or equivalent</li>
-            <li>&rarr; Must be from a recognised curriculum</li>
+            <li>&rarr; Must be from a recognized curriculum</li>
             <li>&rarr; Equivalency certificate required for private UAE & international schools</li>
           </ul>
         </div>
@@ -155,232 +155,273 @@
     </div>
   </section>
 
+  <!-- timeline -->
+
 
   <section class="admissions-timeline">
     <div class="container">
 
-      <h2 class="section-title">Fall 2026 Admissions Timeline</h2>
+      <h2 class="section-title">
+        Fall 2026 Admissions Timeline
+      </h2>
+
       <p class="section-subtitle">
-        Click any milestone for full details, notes and deadlines.
+        Hover over any milestone for full details, notes and deadlines.
       </p>
 
+
+      <div class="timeline-header">
       <!-- Legend -->
       <div class="legend">
+
         <div class="legend-item">
           <span class="legend-dot bg-blue"></span>
           <span>Application</span>
         </div>
+
         <div class="legend-item">
           <span class="legend-dot bg-orange"></span>
           <span>Testing &amp; Review</span>
         </div>
+
         <div class="legend-item">
           <span class="legend-dot bg-green"></span>
           <span>Offers</span>
         </div>
+
         <div class="legend-item">
           <span class="legend-dot bg-red"></span>
           <span>Deadlines</span>
         </div>
+
       </div>
 
-      <!-- Timeline -->
+      <!-- Timeline Navigation -->
+      <div class="timeline-navigation">
 
+        <button
+          class="timeline-arrow prev"
+          type="button"
+          aria-label="Previous milestones"
+          disabled>
+           <img src="assets/images/left.png" alt="left arrow" class="arrow" />
+        </button>
+
+        <button
+          class="timeline-arrow next"
+          type="button"
+          aria-label="Next milestones">
+           <img src="assets/images/right.png" alt="right arrow" class="arrow" />
+        </button>
+
+      </div>
+      </div>
+
+
+      <!-- Timeline Wrapper -->
       <div class="timeline-wrapper">
 
+        <div class="timeline-track">
 
+          <!-- Milestone 1 -->
+          <article class="timeline-item">
 
-        <!-- Timeline -->
-        <div class="timeline">
+            <span class="step-badge bg-blue">1</span>
 
-          <!-- 1 -->
-          <div class="timeline-row">
-            <div class="date-col">Oct 29, 2025</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-blue">1</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">NAPO Application Opens</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    The NAPO (National Admission Program Online) application portal opens, allowing eligible students to begin their application process for Khalifa University.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+            <div class="timeline-card">
 
-          <!-- 2 -->
-          <div class="timeline-row">
-            <div class="date-col">Nov 17, 2025</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-blue">2</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion open" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">General Applications Open</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    Applications open for Expats (Grade 12), International applicants, and Previous Year Graduates of all nationalities.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+              <div class="card-date">Oct 29, 2025</div>
 
-          <!-- 3 -->
-          <div class="timeline-row">
-            <div class="date-col">Dec 1, 2025</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-orange">3</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">Screening Begins</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    The admissions team begins reviewing submitted applications, verifying documents, and assessing academic qualifications of all applicants.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+              <h3 class="card-title">
+                NAPO Application Opens
+              </h3>
 
-          <!-- 4 -->
-          <div class="timeline-row">
-            <div class="date-col">Mar 2, 2026</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-red">4</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">Application Deadline</span>
-                  <span class="accordion-chevron">▾</span>
+              <div class="card-description">
+                <div class="description-inner">
+                  The NAPO (National Admission Program Online)
+                  application portal opens, allowing eligible students
+                  to begin their application process for Khalifa University.
                 </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    The final deadline for submitting all application materials. Late applications will not be considered for the Fall 2026 intake.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+              </div>
 
-          <!-- 5 -->
-          <div class="timeline-row">
-            <div class="date-col">Feb – Apr 2026</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-orange">5</div>
             </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">KU Admission Tests Period</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    Shortlisted applicants will be invited to sit the KU admission tests during this period. Tests evaluate academic aptitude in mathematics, sciences, and English proficiency.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+          </article>
 
-          <!-- 6 -->
-          <div class="timeline-row">
-            <div class="date-col">Jan 12 – May 2026</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-green">6</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">Early Admission Offers</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    Successful candidates who meet all criteria will receive conditional or unconditional offers of admission on a rolling basis throughout this period.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+          <!-- Milestone 2 -->
+          <article class="timeline-item">
 
-          <!-- 7 -->
-          <div class="timeline-row">
-            <div class="date-col">Jul 1–11, 2026</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-red">7</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">Final Transcript Deadline</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    All admitted students must submit their official final transcripts and graduation certificates by this date to confirm their enrollment for Fall 2026.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+            <span class="step-badge bg-blue">2</span>
 
-          <!-- 8 -->
-          <div class="timeline-row">
-            <div class="date-col">Aug 2026</div>
-            <div class="spine-col">
-              <div class="spine-line"></div>
-              <div class="step-badge bg-green">8</div>
-            </div>
-            <div class="content-col">
-              <button class="accordion" onclick="toggle(this)">
-                <div class="accordion-header">
-                  <span class="accordion-title">Fall 2026 Orientation</span>
-                  <span class="accordion-chevron">▾</span>
-                </div>
-                <div class="accordion-body">
-                  <div class="accordion-content">
-                    New students attend orientation week, meet faculty and peers, complete registration, and prepare for the start of the Fall 2026 semester at Khalifa University.
-                  </div>
-                </div>
-              </button>
-            </div>
-            <div class="right-col"></div>
-          </div>
+            <div class="timeline-card">
 
-        </div><!-- /timeline -->
-      </div><!-- /wrapper -->
+              <div class="card-date">Nov 17, 2025</div>
+
+              <h3 class="card-title">
+                General Applications Open
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  Applications open for Expats (Grade 12),
+                  International applicants, and Previous Year
+                  Graduates of all nationalities.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- Milestone 3 -->
+          <article class="timeline-item">
+
+            <span class="step-badge bg-orange">3</span>
+
+            <div class="timeline-card">
+
+              <div class="card-date">Dec 1, 2025</div>
+
+              <h3 class="card-title">
+                Screening Begins
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  The admissions team begins reviewing submitted
+                  applications, verifying documents, and assessing
+                  academic qualifications of all applicants.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- Milestone 4 -->
+          <article class="timeline-item">
+
+            <span class="step-badge bg-red">4</span>
+
+            <div class="timeline-card">
+
+              <div class="card-date">Mar 2, 2026</div>
+
+              <h3 class="card-title">
+                Application Deadline
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  The final deadline for submitting all application
+                  materials. Late applications will not be considered
+                  for the Fall 2026 intake.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- Milestone 5 -->
+          <article class="timeline-item">
+
+            <span class="step-badge bg-orange">5</span>
+
+            <div class="timeline-card">
+
+              <div class="card-date">Feb – Apr 2026</div>
+
+              <h3 class="card-title">
+                KU Admission Tests Period
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  Shortlisted applicants will be invited to sit
+                  the KU admission tests during this period.
+                  Tests evaluate academic aptitude in mathematics,
+                  sciences, and English proficiency.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- Milestone 6 -->
+          <article class="timeline-item">
+
+            <span class="step-badge bg-green">6</span>
+
+            <div class="timeline-card">
+
+              <div class="card-date">Jan 12 – May 2026</div>
+
+              <h3 class="card-title">
+                Early Admission Offers
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  Successful candidates who meet all criteria
+                  will receive conditional or unconditional offers
+                  of admission on a rolling basis throughout this period.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- Milestone 7 -->
+          <article class="timeline-item">
+
+            <span class="step-badge bg-red">7</span>
+
+            <div class="timeline-card">
+
+              <div class="card-date">Jul 1–11, 2026</div>
+
+              <h3 class="card-title">
+                Final Transcript Deadline
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  All admitted students must submit their official
+                  final transcripts and graduation certificates by
+                  this date to confirm their enrollment for Fall 2026.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- Milestone 8 -->
+          <article class="timeline-item">
+
+            <span class="step-badge bg-green">8</span>
+
+            <div class="timeline-card">
+
+              <div class="card-date">Aug 2026</div>
+
+              <h3 class="card-title">
+                Fall 2026 Orientation
+              </h3>
+
+              <div class="card-description">
+                <div class="description-inner">
+                  New students attend orientation week, meet faculty
+                  and peers, complete registration, and prepare for
+                  the start of the Fall 2026 semester at Khalifa University.
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+      </div>
+
     </div>
   </section>
+
 
 
   <!-- important policies Section -->
@@ -611,7 +652,7 @@
     </div>
   </section>
 
-  <!-- scholorship -->
+  <!-- scholarship -->
   <section class="scholarships-section">
 
 
@@ -622,7 +663,7 @@
         <!-- Card 1 -->
         <a href="#" class="scholarship-card">
           <div class="card-image">
-            <img src="assets/images/scholorship/img2.png" alt="Undergraduate researcher">
+            <img src="assets/images/scholarship/img2.png" alt="Undergraduate researcher">
           </div>
           <div class="card-footer">
             <span class="label">UNDERGRADUATE SCHOLARSHIPS</span>
@@ -633,7 +674,7 @@
         <!-- Card 2 -->
         <a href="#" class="scholarship-card">
           <div class="card-image">
-            <img src="assets/images/scholorship/img1.png" alt="Scientists in lab">
+            <img src="assets/images/scholarship/img1.png" alt="Scientists in lab">
           </div>
           <div class="card-footer">
             <span class="label">UNDERGRADUATE SCHOLARSHIPS</span>
@@ -663,7 +704,7 @@
           <span class="text">KU Undergraduate Brochure</span>
           <div class="action-meta">
             <span class="separator"></span>
-            <img src="assets/images/vision.png" alt="vison" class="icon">
+            <img src="assets/images/vision.png" alt="vision" class="icon">
             <span class="label">View</span>
           </div>
         </a>
@@ -671,7 +712,7 @@
           <span class="text">Ku Times</span>
           <div class="action-meta">
             <span class="separator"></span>
-            <img src="assets/images/vision.png" alt="vison" class="icon">
+            <img src="assets/images/vision.png" alt="vision" class="icon">
             <span class="label">View</span>
           </div>
         </a>
@@ -679,7 +720,7 @@
           <span class="text">KU Undergraduate Catalog</span>
           <div class="action-meta">
             <span class="separator"></span>
-            <img src="assets/images/vision.png" alt="vison" class="icon">
+            <img src="assets/images/vision.png" alt="vision" class="icon">
             <span class="label">View</span>
           </div>
         </a>
@@ -687,7 +728,7 @@
           <span class="text">Connect with us</span>
           <div class="action-meta">
             <span class="separator"></span>
-            <img src="assets/images/vision.png" alt="vison" class="icon" style="opacity: 0;">
+            <img src="assets/images/vision.png" alt="vision" class="icon" style="opacity: 0;">
 
             <span class="label">Visit</span>
           </div>
