@@ -10,7 +10,7 @@
   </title>
 
   <!-- Favicon for standard browsers -->
-  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="assets/images/favicon.jpg" type="image/x-icon" />
 
   <!-- Splide CSS -->
   <link
@@ -171,57 +171,57 @@
 
 
       <div class="timeline-header">
-      <!-- Legend -->
-      <div class="legend">
+        <!-- Legend -->
+        <div class="legend">
 
-        <div class="legend-item">
-          <span class="legend-dot bg-blue"></span>
-          <span>Application</span>
+          <div class="legend-item">
+            <span class="legend-dot bg-blue"></span>
+            <span>Application</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot bg-orange"></span>
+            <span>Testing &amp; Review</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot bg-green"></span>
+            <span>Offers</span>
+          </div>
+
+          <div class="legend-item">
+            <span class="legend-dot bg-red"></span>
+            <span>Deadlines</span>
+          </div>
+
         </div>
 
-        <div class="legend-item">
-          <span class="legend-dot bg-orange"></span>
-          <span>Testing &amp; Review</span>
+        <!-- Timeline Navigation -->
+        <div class="timeline-navigation">
+
+          <button
+            class="timeline-arrow prev"
+            type="button"
+            aria-label="Previous milestones"
+            disabled>
+            <img src="assets/images/left.png" alt="left arrow" class="arrow" />
+          </button>
+
+          <button
+            class="timeline-arrow next"
+            type="button"
+            aria-label="Next milestones">
+            <img src="assets/images/right.png" alt="right arrow" class="arrow" />
+          </button>
+
         </div>
-
-        <div class="legend-item">
-          <span class="legend-dot bg-green"></span>
-          <span>Offers</span>
-        </div>
-
-        <div class="legend-item">
-          <span class="legend-dot bg-red"></span>
-          <span>Deadlines</span>
-        </div>
-
-      </div>
-
-      <!-- Timeline Navigation -->
-      <div class="timeline-navigation">
-
-        <button
-          class="timeline-arrow prev"
-          type="button"
-          aria-label="Previous milestones"
-          disabled>
-           <img src="assets/images/left.png" alt="left arrow" class="arrow" />
-        </button>
-
-        <button
-          class="timeline-arrow next"
-          type="button"
-          aria-label="Next milestones">
-           <img src="assets/images/right.png" alt="right arrow" class="arrow" />
-        </button>
-
-      </div>
       </div>
 
 
       <!-- Timeline Wrapper -->
       <div class="timeline-wrapper">
 
-          <div class="timeline-track" style="--total-items: 8;">
+        <div class="timeline-track" style="--total-items: 8;">
 
           <!-- Milestone 1 -->
           <article class="timeline-item">
@@ -471,7 +471,7 @@
         <div class="cta-info">
           <p>The application will close on <strong>2 March 2026</strong> - Apply before this date to be considered for admission.</p>
         </div>
-        <a href="#" class="cta-button">
+        <a href="https://ugapply.ku.ac.ae/portal/ug_landing" class="cta-button">
           <span>Start your application here</span>
           <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow" />
         </a>
@@ -511,18 +511,20 @@
             <div class="card-title">College of Engineering &amp; Physical Sciences</div>
             <div class="card-flex">
               <div class="card-sub">Aerospace, Civil, Electrical, Mechanical &amp; Chemical Engineering</div>
-              <div class="card-btn">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                  width="20" height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </div>
+              <a href="https://www.ku.ac.ae/academics/college-of-engineering#deans-message">
+                <div class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    width="20" height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -538,18 +540,21 @@
             <div class="card-title">College of Medicine &amp; Health Sciences</div>
             <div class="card-flex">
               <div class="card-sub">Medicine, Biomedical Sciences, Nursing &amp; Health programs</div>
-              <div class="card-btn">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                  width="20" height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </div>
+              <a href="https://www.ku.ac.ae/academics/college-of-medicine-and-health-sciences">
+
+                <div class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    width="20" height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -565,18 +570,20 @@
             <div class="card-title">College of Computing &amp; Mathematical Sciences</div>
             <div class="card-flex">
               <div class="card-sub">Mathematics, Physics, Chemistry &amp; Computer Science</div>
-              <div class="card-btn">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                  width="20" height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </div>
+              <a href="https://www.ku.ac.ae/college-of-computing-and-mathematical-sciences#deans-message">
+                <div class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    width="20" height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -612,7 +619,7 @@
         <div class="cta-info">
           <p>The application will close on <strong>2 March 2026</strong> - Apply before this date to be considered for admission.</p>
         </div>
-        <a href="#" class="cta-button">
+        <a href="https://ugapply.ku.ac.ae/portal/ug_landing" class="cta-button">
           <span>Start your application here</span>
           <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow" />
         </a>
@@ -661,7 +668,7 @@
 
       <div class="scholarships-grid">
         <!-- Card 1 -->
-        <a href="#" class="scholarship-card">
+        <a href="https://www.ku.ac.ae/undergraduate-scholarships" class="scholarship-card">
           <div class="card-image">
             <img src="assets/images/scholarship/img2.png" alt="Undergraduate researcher">
           </div>
@@ -672,12 +679,12 @@
         </a>
 
         <!-- Card 2 -->
-        <a href="#" class="scholarship-card">
+        <a href="https://www.ku.ac.ae/scholarships-postgraduate#international-students" class="scholarship-card">
           <div class="card-image">
             <img src="assets/images/scholarship/img1.png" alt="Scientists in lab">
           </div>
           <div class="card-footer">
-            <span class="label">UNDERGRADUATE SCHOLARSHIPS</span>
+            <span class="label">POSTGRADUATE SCHOLARSHIPS</span>
             <img src="assets/images/right-arrow.png" alt="right arrow" class="arrow" />
           </div>
         </a>
@@ -708,7 +715,7 @@
             <span class="label">View</span>
           </div>
         </a>
-        <a href="#" class="action-btn bg-slate">
+        <a href="https://www.ku.ac.ae/publications" class="action-btn bg-slate">
           <span class="text">Ku Times</span>
           <div class="action-meta">
             <span class="separator"></span>
@@ -724,7 +731,7 @@
             <span class="label">View</span>
           </div>
         </a>
-        <a href="#" class="action-btn bg-dark">
+        <a href="https://www.ku.ac.ae/admissions#connect-with-us" class="action-btn bg-dark">
           <span class="text">Connect with us</span>
           <div class="action-meta">
             <span class="separator"></span>

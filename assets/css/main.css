@@ -1223,7 +1223,7 @@
   border: 1px solid #dadce0;
   border-radius: 10px;
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
 .admissions-timeline .timeline-card:hover .card-date, .admissions-timeline .timeline-card:focus .card-date {
   color: rgba(255, 255, 255, 0.3);
