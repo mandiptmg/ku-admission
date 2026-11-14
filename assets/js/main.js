@@ -220,13 +220,15 @@ $(function () {
   });
 
 
-  /* ========================================
+    /* ========================================
      6. ADMISSIONS TIMELINE
      LEFT / RIGHT ARROW NAVIGATION
+     DYNAMIC CONNECTING LINE
   ======================================== */
 
   document.querySelectorAll(".admissions-timeline").forEach((section) => {
     const track = section.querySelector(".timeline-track");
+
     const items = Array.from(
       section.querySelectorAll(".timeline-item")
     );
@@ -240,18 +242,46 @@ $(function () {
 
     let currentIndex = 0;
 
+    // Set total timeline items dynamically
+    track.style.setProperty("--total-items", items.length);
+
     // Get visible items from CSS
     function getVisibleItems() {
       const value = getComputedStyle(track)
         .getPropertyValue("--visible-items")
         .trim();
 
-      return Math.max(1, parseInt(value, 10) || 5);
+      return Math.max(1, parseInt(value, 10) || 1);
     }
 
     // Calculate maximum navigation index
     function getMaxIndex() {
       return Math.max(0, items.length - getVisibleItems());
+    }
+
+    // Update connecting line
+    function updateTimelineLine() {
+      const firstItem = items[0];
+      const lastItem = items[items.length - 1];
+
+      if (!firstItem || !lastItem) return;
+
+      const firstCenter =
+        firstItem.offsetLeft + firstItem.offsetWidth / 2;
+
+      const lastCenter =
+        lastItem.offsetLeft + lastItem.offsetWidth / 2;
+
+      // Dynamic line positioning
+      track.style.setProperty(
+        "--line-left",
+        `${firstCenter}px`
+      );
+
+      track.style.setProperty(
+        "--line-width",
+        `${lastCenter - firstCenter}px`
+      );
     }
 
     // Update timeline position and arrows
@@ -281,6 +311,8 @@ $(function () {
         "aria-label",
         "Next timeline milestone"
       );
+
+      updateTimelineLine();
     }
 
     // Navigate next
@@ -305,6 +337,15 @@ $(function () {
 
     // Responsive update
     window.addEventListener("resize", updateTimeline);
+
+    // Recalculate after layout changes
+    if ("ResizeObserver" in window) {
+      const resizeObserver = new ResizeObserver(() => {
+        updateTimeline();
+      });
+
+      resizeObserver.observe(track);
+    }
 
     // Initial position
     updateTimeline();

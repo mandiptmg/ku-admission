@@ -221,7 +221,7 @@
       <!-- Timeline Wrapper -->
       <div class="timeline-wrapper">
 
-        <div class="timeline-track">
+          <div class="timeline-track" style="--total-items: 8;">
 
           <!-- Milestone 1 -->
           <article class="timeline-item">

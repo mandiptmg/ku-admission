@@ -1,33 +1,39 @@
 @use "../../mixins" as *;
 @use "../../variables" as *;
 
-
 .admissions-timeline {
+  // VARIABLES
+
   --blue: #1a73e8;
   --orange: #e8710a;
   --green: #34a853;
   --red: #d93025;
 
   background: #f8f9fb;
-  padding: 64px 0;
+  padding: 45px 0;
 
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
-  /* Section Heading */
+  // SECTION HEADING
+
   .section-title {
     color: #202124;
     text-align: left;
     font-weight: 700;
+    font-size: 22px;
     margin: 0 0 8px;
     text-transform: uppercase;
-    font-size: 28px;
+    line-height: 1.3;
   }
 
   .section-subtitle {
     color: #718096;
     font-size: 14px;
+    line-height: 1.6;
     margin: 0;
   }
 
@@ -36,24 +42,25 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 15px;
+    margin-bottom: 25px;
   }
 
-  /* Legend */
+  // LEGEND
+
   .legend {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
-    margin: 35px 0 55px;
+    gap: 12px;
+    margin: 25px 0 35px;
   }
 
   .legend-item {
     display: flex;
     align-items: center;
     gap: 7px;
-    font-size: 13px;
+    font-size: 12px;
     color: #4a5568;
   }
 
@@ -64,7 +71,8 @@
     flex-shrink: 0;
   }
 
-  /* Colors */
+  // COLORS
+
   .bg-blue {
     background: var(--blue);
   }
@@ -81,7 +89,8 @@
     background: var(--red);
   }
 
-  /* Navigation */
+  // NAVIGATION
+
   .timeline-navigation {
     display: flex;
     justify-content: flex-end;
@@ -91,10 +100,12 @@
   }
 
   .timeline-arrow {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+
     border: 1px solid #dadce0;
     border-radius: 50%;
+
     background: transparent;
     color: #5f6368;
 
@@ -105,24 +116,25 @@
     font-size: 18px;
     cursor: pointer;
 
-    img.arrow {
-      width: 12px;
-      height: 12px;
-      transition: filter 0.3s ease;
-      &:hover {
-       @include white-filter;
-      }
-    }
-
     transition:
       background 0.25s ease,
       color 0.25s ease,
       border-color 0.25s ease;
 
+    img.arrow {
+      width: 12px;
+      height: 12px;
+    }
+
     &:hover:not(:disabled) {
       background: var(--blue);
       color: #fff;
       border-color: var(--blue);
+
+      img.arrow {
+        transition: filter 0.3s ease;
+        @include white-filter;
+      }
     }
 
     &:disabled {
@@ -136,51 +148,69 @@
     }
   }
 
-  /* Timeline Wrapper */
+  // TIMELINE WRAPPER
+
   .timeline-wrapper {
     width: 100%;
     overflow: hidden;
     padding: 0 0 20px;
   }
 
-  /* Horizontal Track */
+  // TIMELINE TRACK
+
   .timeline-track {
-    --visible-items: 5;
+    --visible-items: 1;
+    --total-items: 8;
+    --item-gap: 10px;
 
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: var(--item-gap);
 
     width: 100%;
     position: relative;
 
     transform: translateX(0);
-    transition: transform 0.45s ease;
+    transition: transform 0.5s ease;
 
     will-change: transform;
 
-    /* Connecting Line */
+    // Dynamic connecting line
     &::before {
       content: "";
       position: absolute;
 
       top: 14px;
-      left: 0;
-      right: 0;
+        left: var(--line-left, 0px);
+  width: var(--line-width, 100%);
+
+      // // Center of first item
+      // left: calc(
+      //   (100% - (var(--visible-items) - 1) * var(--item-gap)) /
+      //     var(--visible-items) / 2
+      // );
+
+      // // Center of last item
+      // width: calc(
+      //   (var(--total-items) - 1) *
+      //     (
+      //       (100% - (var(--visible-items) - 1) * var(--item-gap)) /
+      //         var(--visible-items) + var(--item-gap)
+      //     )
+      // );
 
       height: 1px;
       background: #a0a0a0;
-
+      pointer-events: none;
       z-index: 0;
     }
   }
 
-  /* Timeline Item */
+  // TIMELINE ITEM
+
   .timeline-item {
-    flex: 0 0 calc(
-      (100% - (var(--visible-items) - 1) * 10px)
-      / var(--visible-items)
-    );
+    flex: 0 0
+      calc((100% - (var(--visible-items) - 1) * 10px) / var(--visible-items));
 
     min-width: 0;
     position: relative;
@@ -188,9 +218,11 @@
     padding-top: 40px;
   }
 
-  /* Number Badge */
+  // STEP BADGE
+
   .step-badge {
     position: absolute;
+
     top: 4px;
     left: 50%;
 
@@ -212,14 +244,15 @@
     z-index: 2;
   }
 
-  /* Timeline Card */
+  // TIMELINE CARD
+
   .timeline-card {
     position: relative;
 
     width: 100%;
-    min-height: 95px;
+    min-height: 108px;
 
-    padding: 20px 18px;
+    padding: 18px;
 
     background: #fff;
     border: 1px solid #dadce0;
@@ -233,39 +266,49 @@
 
     &:hover,
     &:focus {
-      border-color: var(--blue);
+      .card-date {
+        color: rgba(#fff, 0.3);
+      }
+      .card-title {
+        color: #fff;
+      }
+      background: #2059a8;
+      border-color: #2059a8;
       box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
       outline: none;
     }
 
     &:focus-visible {
-      outline: 2px solid var(--blue);
+      outline: 2px solid #2059a8;
       outline-offset: 3px;
     }
   }
 
-  /* Date */
+  // CARD DATE
+
   .card-date {
     color: #202124;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
+
     text-transform: uppercase;
     letter-spacing: 0.3px;
 
     margin-bottom: 5px;
   }
 
-  /* Title */
-  .card-title {
-    color: var(--blue);
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.35;
+  // CARD TITLE
 
+  .card-title {
+    color: #2059a8;
+    font-size: 1rem !important;
+    line-height: 1.4;
+    font-weight: 700;
     margin: 0;
   }
 
-  /* Description - Hidden by Default */
+  // CARD DESCRIPTION
+
   .card-description {
     display: grid;
     grid-template-rows: 0fr;
@@ -283,15 +326,16 @@
     min-height: 0;
     overflow: hidden;
 
-    color: #4a5568;
-    font-size: 12px;
+    color: #fff;
+    font-size: 14px;
     line-height: 1.6;
 
     padding-top: 0;
+
     transition: padding 0.35s ease;
   }
 
-  /* Hover: Slide Down */
+  // Hover / Focus Description
   .timeline-card:hover .card-description,
   .timeline-card:focus .card-description,
   .timeline-card:focus-within .card-description {
@@ -307,69 +351,96 @@
     padding-top: 14px;
   }
 
-  /* Tablet */
-  @media (max-width: 991px) {
+  // TABLET: 720px+
+
+  @include responsive(md) {
     .timeline-track {
-      --visible-items: 3;
+      --visible-items: 2;
     }
 
     .section-title {
       font-size: 26px;
     }
-  }
 
-  /* Mobile */
-  @media (max-width: 767px) {
-    padding: 45px 0;
-
-    .timeline-track {
-      --visible-items: 2;
-    }
-
-    .legend {
-      gap: 12px;
-      margin: 25px 0 40px;
-    }
-
-    .legend-item {
-      font-size: 12px;
-    }
-
-    .section-title {
-      font-size: 22px;
+    .section-subtitle {
+      font-size: 14px;
     }
 
     .timeline-card {
-      padding: 16px 12px;
+      padding: 18px 14px;
     }
 
     .card-title {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
-  /* Small Mobile */
-  @media (max-width: 480px) {
+  // LAPTOP: 960px+
+
+  @include responsive(lg) {
+    padding: 55px 0;
+
     .timeline-track {
-      --visible-items: 1;
+      --visible-items: 3;
     }
 
-    .timeline-item {
-      flex-basis: 100%;
+    .section-title {
+      font-size: 28px;
+    }
+
+    .legend {
+      gap: 20px;
+      margin: 35px 0 45px;
+    }
+
+    .legend-item {
+      font-size: 14px;
     }
 
     .timeline-card {
-      padding: 18px;
+      padding: 20px 16px;
+    }
+
+    .card-date,
+    .card-title {
+      font-size: 14px;
     }
   }
 
-  /* Reduced Motion */
+  // LARGE LAPTOP: 1140px+
+
+  @include responsive(xl) {
+    .timeline-track {
+      --visible-items: 4;
+    }
+
+    .timeline-card {
+      padding: 20px 18px;
+    }
+  }
+
+  // DESKTOP: 1320px+
+
+  @include responsive(2xl) {
+    padding: 64px 0;
+
+    .timeline-track {
+      --visible-items: 5;
+    }
+  }
+
+  // REDUCED MOTION
+
   @media (prefers-reduced-motion: reduce) {
     .timeline-track,
     .timeline-card,
     .card-description,
     .description-inner {
       transition: none;
+    }
+
+    .timeline-track {
+      will-change: auto;
     }
   }
 }
